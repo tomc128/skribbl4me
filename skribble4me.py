@@ -68,14 +68,38 @@ def detect_game_state() -> str:
     except NoSuchElementException:
         pass
 
-    return 'unknown'
+    try:
+        my_player = driver.find_element(By.ID, 'containerGamePlayers').find_element(By.XPATH, '//div[contains(text(), "(You)")]/../..')
+        if 'guessedWord' in my_player.get_attribute('class'):
+            return 'guessed'
+    except NoSuchElementException:
+        pass
+    
+    return 'guessing'
 
 
 
 
 def game_loop() -> None:
     while True:
+        state = detect_state()
         game_state = detect_game_state()
+
+        if state != 'game':
+            break
+
+        match game_state:
+            case 'drawing':
+                pass
+            case 'waiting_for_round':
+                pass
+            case 'guessed':
+                pass
+            case 'guessing':
+                pass
+
+        sleep(0.5)
+
 
 
 
