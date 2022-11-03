@@ -1,3 +1,4 @@
+import re
 from time import sleep
 
 from selenium import webdriver
@@ -10,7 +11,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
 
-def init() -> None:
+def init_driver() -> None:
     global driver
 
     options = Options()
@@ -27,6 +28,13 @@ def init() -> None:
         consent_button.click()
     except NoSuchElementException:
         pass
+
+
+def init_word_list() -> None:
+    global word_list
+
+    with open('default_words.txt', 'r') as f:
+        word_list = [line.strip() for line in f.readlines() if line.strip()]
 
 
 def detect_state() -> str:
@@ -78,6 +86,33 @@ def detect_game_state() -> str:
     return 'guessing'
 
 
+def generate_regex(word_hint) -> str:
+    return '^' + ''.join(['\\w' if char == '_' else '\\W' if char == ' ' else char for char in word_hint]) + '$'
+
+
+def get_word_hint() -> str:
+    return driver.find_element(By.ID, 'currentWord').text
+
+
+def make_guess() -> None:
+    word_hint = get_word_hint()
+
+    if not word_hint:
+        print('No word detected on page')
+        return
+
+    num_hints = len(re.findall('_', word_hint))
+    regex = generate_regex(word_hint)
+
+    possible_words = [word for word in word_list if (re.match(regex, word, flags=re.IGNORECASE)) and (word not in guessed_words)]
+
+    if len(possible_words) == 0:
+        print('No possible words found')
+        return
+    
+    
+
+    
 
 
 def game_loop() -> None:
@@ -125,7 +160,10 @@ def on_state_change(state: str) -> None:
 if __name__ == '__main__':
 
     current_state = 'uninitialised'
-    init()
+    guessed_words = []
+
+    init_driver()
+    init_word_list()
 
     while True:
         state = detect_state()
