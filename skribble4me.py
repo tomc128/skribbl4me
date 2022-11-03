@@ -15,8 +15,6 @@ LOOP_UPDATE_DELAY = 0.5
 GUESS_DELAY_RANGE = [(4, 8), (3, 6), (1, 2)]
 
 
-
-
 def init_driver() -> None:
     global driver
 
@@ -136,7 +134,6 @@ def make_guess() -> None:
     sleep(delay)
 
 
-
 def game_loop() -> None:
     while True:
         state = detect_state()
@@ -153,7 +150,6 @@ def game_loop() -> None:
             case 'guessed':
                 pass
             case 'guessing':
-
                 make_guess()
 
         sleep(LOOP_UPDATE_DELAY)
@@ -184,6 +180,7 @@ if __name__ == '__main__':
 
     current_state = 'uninitialised'
     guessed_words = []
+    drawing_has_started = False
 
     init_driver()
     init_word_list()
