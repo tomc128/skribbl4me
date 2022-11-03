@@ -1,3 +1,4 @@
+import random
 import re
 from time import sleep
 
@@ -9,6 +10,11 @@ from selenium.webdriver.edge.options import Options
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+
+LOOP_UPDATE_DELAY = 0.5
+GUESS_DELAY_RANGE = [(4, 8), (3, 6), (1, 2)]
+
+
 
 
 def init_driver() -> None:
@@ -35,6 +41,8 @@ def init_word_list() -> None:
 
     with open('default_words.txt', 'r') as f:
         word_list = [line.strip() for line in f.readlines() if line.strip()]
+
+    print(f'Loaded {len(word_list)} words')
 
 
 def detect_state() -> str:
@@ -94,6 +102,10 @@ def get_word_hint() -> str:
     return driver.find_element(By.ID, 'currentWord').text
 
 
+def clamp(value: int, min_value: int, max_value: int) -> int:
+    return max(min_value, min(value, max_value))
+
+
 def make_guess() -> None:
     word_hint = get_word_hint()
 
@@ -101,7 +113,7 @@ def make_guess() -> None:
         print('No word detected on page')
         return
 
-    num_hints = len(re.findall('_', word_hint))
+    num_hints = len(re.findall('[a-z]', word_hint, re.IGNORECASE))
     regex = generate_regex(word_hint)
 
     possible_words = [word for word in word_list if (re.match(regex, word, flags=re.IGNORECASE)) and (word not in guessed_words)]
@@ -110,9 +122,19 @@ def make_guess() -> None:
         print('No possible words found')
         return
     
-    
+    guess = random.choice(possible_words)
+    guessed_words.append(guess)
 
+    print(f'{num_hints}/2 hints. Guessing {guess}, one of {len(possible_words)} possible words. Guessed {len(guessed_words)} words so far')
+
+    guess_input = driver.find_element(By.ID, 'inputChat')
+    guess_input.send_keys(guess)
+    guess_input.send_keys('\n')
     
+    delay = random.uniform(*GUESS_DELAY_RANGE[clamp(num_hints, 0, 2)])
+    print(f'Waiting {delay} seconds...')
+    sleep(delay)
+
 
 
 def game_loop() -> None:
@@ -131,9 +153,10 @@ def game_loop() -> None:
             case 'guessed':
                 pass
             case 'guessing':
-                pass
 
-        sleep(0.5)
+                make_guess()
+
+        sleep(LOOP_UPDATE_DELAY)
 
 
 
@@ -173,4 +196,4 @@ if __name__ == '__main__':
             current_state = state
             on_state_change(state)
 
-        sleep(0.5)
+        sleep(LOOP_UPDATE_DELAY)
