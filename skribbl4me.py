@@ -1,3 +1,4 @@
+import argparse
 import random
 import re
 from time import sleep
@@ -15,12 +16,12 @@ LOOP_UPDATE_DELAY = 0.5
 GUESS_DELAY_RANGE = [(4, 8), (3, 6), (1, 2)]
 
 
-def init_driver() -> None:
+def init_driver(driver_executable: str) -> None:
     global driver
 
     options = Options()
     options.add_extension('extension.crx')
-    driver = webdriver.Edge(executable_path='./msedgedriver.exe', options=options)
+    driver = webdriver.Edge(executable_path=f'./{driver_executable}', options=options)
 
     driver.get('https://skribbl.io/')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, 'screenLogin')))
@@ -178,11 +179,15 @@ def on_state_change(state: str) -> None:
 
 if __name__ == '__main__':
 
+    parser = argparse.ArgumentParser(description='Skribbl.io bot')
+    parser.add_argument('-d', '--driver', required=True, help='Name of the webdriver executable')
+    args = parser.parse_args()
+
     current_state = 'uninitialised'
     guessed_words = []
     drawing_has_started = False
 
-    init_driver()
+    init_driver(args.driver)
     init_word_list()
 
     while True:

@@ -10,10 +10,33 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "setup.py",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/setup.py",
+            "console": "integratedTerminal",
             "justMyCode": true,
             "args": [
-                "--version",
-                "107.0.1418.26"
+                "edge",
+                "-v",
+                "107.0.1418.26",
+                "-p",
+                "win64",
+            ]
+        },
+        {
+            "name": "skribbl4me",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/skribbl4me.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "-d",
+                "msedgedriver.exe"
             ]
         }
     ]
