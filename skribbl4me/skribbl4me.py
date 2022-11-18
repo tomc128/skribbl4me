@@ -61,6 +61,9 @@ def init_word_list() -> None:
 
 
 def detect_state() -> str:
+
+    # TODO: improve lobby detection (as in scrape4me.py)
+     
     screens : dict[str, WebElement] = {}
     screens['login'] = driver.find_element(By.ID, 'home') # initial login screen
     screens['lobby'] = driver.find_element(By.ID, 'start-game') # custom lobby screen ('start-game' is a button with that ID which only displays when you're in the lobby - there is no dedicated lobby screen)
