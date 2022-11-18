@@ -63,11 +63,10 @@ def init_word_list() -> None:
 
 def detect_state() -> str:
     screens : dict[str, WebElement] = {}
-    screens['login'] = driver.find_element(By.ID, 'screenLogin') # initial login screen
-    screens['lobby'] = driver.find_element(By.ID, 'screenLobby') # custom lobby screen
-    screens['loading']= driver.find_element(By.ID, 'screenLoading') # loading screen
-    screens['browser'] = driver.find_element(By.ID, 'screenBrowser') # ? unknown screen
-    screens['game'] = driver.find_element(By.ID, 'screenGame') # game screen
+    screens['login'] = driver.find_element(By.ID, 'home') # initial login screen
+    screens['lobby'] = driver.find_element(By.ID, 'start-game') # custom lobby screen ('start-game' is a button with that ID which only displays when you're in the lobby - there is no dedicated lobby screen)
+    screens['loading']= driver.find_element(By.ID, 'load') # loading screen
+    screens['game'] = driver.find_element(By.ID, 'game') # game screen
     displayed = []
 
     for screen_id, screen in screens.items():
@@ -115,7 +114,17 @@ def generate_regex(word_hint) -> str:
 
 
 def get_word_hint() -> str:
-    return driver.find_element(By.ID, 'currentWord').text
+    # #game-word > .hints > .container > many .hint elements - the ones with the class 'uncover' are the ones that are uncovered
+    word_hint = ''
+
+    parent = driver.find_element(By.ID, 'game-word')
+    hint_container = parent.find_element(By.CLASS_NAME, 'hints').find_element(By.CLASS_NAME, 'container')
+    hints = hint_container.find_elements(By.CLASS_NAME, 'hint')
+
+    for hint in hints:
+        word_hint += hint.text
+
+    return word_hint
 
 
 def clamp(value: int, min_value: int, max_value: int) -> int:
@@ -129,8 +138,9 @@ def make_guess() -> None:
         print('No word detected on page')
         return
 
-    guess_input = driver.find_element(By.ID, 'inputChat')
-
+    # #game > #game-wrapper #game-chat > .chat-container > form > input
+    guess_input = driver.find_element(By.ID, 'game-wrapper').find_element(By.ID, 'game-chat').find_element(By.CLASS_NAME, 'chat-container').find_element(By.TAG_NAME, 'form').find_element(By.TAG_NAME, 'input')
+    
     if guess_input.get_attribute('value'):
         print('User is typing, skipping guess')
         return
@@ -183,19 +193,11 @@ def game_loop() -> None:
 
 def on_state_change(state: str) -> None:
     match state:
-        case 'login':
-            pass
-        case 'lobby':
-            pass
-        case 'loading':
-            pass
-        case 'browser':
+        case 'login' | 'lobby' | 'loading':
             pass
         case 'game':
             game_loop()
-        case 'unknown':
-            pass
-        case 'multiple':
+        case 'unknown' | 'multiple':
             pass
 
 
