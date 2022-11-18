@@ -21,21 +21,30 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.select import Select
+from selenium.webdriver.common.keys import Keys
 
 
 
 
-LOOP_DELAY = 2
-RAW_WORD_ENCOUNTERS_FILE = './word_encounters.txt'
+LOOP_DELAY = 0.5
+RAW_WORD_ENCOUNTERS_FILE = 'word_encounters.txt'
 
+# between 2 and 10 (inclusive) - 10 is most efficient
+ROUND_COUNT = 10
+
+HEADLESS = False
+
+global_stop_flag = False
 
 
 def log_word(word: str) -> None:
     if not word.strip():
         return
-        
+
+    file_path = path.join(path.dirname(path.abspath(__file__)), RAW_WORD_ENCOUNTERS_FILE)
+
     print(f'Logging word: {word}')
-    with open(RAW_WORD_ENCOUNTERS_FILE, 'a', encoding='utf-8') as file:
+    with open(file_path, 'a', encoding='utf-8') as file:
         file.write(f'{word}\n')
 
 
@@ -44,11 +53,15 @@ def log_word(word: str) -> None:
 class Scraper:
 
     def __init__(self, role: Literal['host', 'player'], executable_name: str):
+        self.other = None
         self.role = role
         self.executable_name = executable_name
 
         self.__init_driver()
     
+    def set_other(self, other: 'Scraper'):
+        self.other = other
+
     def __init_driver(self):
         driver_executable = path.join(path.dirname(path.abspath(__file__)), '../', 'lib', 'webdriver', self.executable_name)
 
@@ -56,16 +69,28 @@ class Scraper:
 
         if browser == 'edge':
             options = EdgeOptions()
+            options.headless = HEADLESS
             service = EdgeService(executable_path=driver_executable)
             self.driver = webdriver.Edge(service=service, options=options)
         else:
             options = ChromeOptions()
+            options.headless = HEADLESS
             service = ChromeService(executable_path=driver_executable)
             self.driver = webdriver.Chrome(service=service, options=options)
+
+        self.driver.set_window_size(1200, 800)
+        if self.role == 'host':
+            self.driver.set_window_position(0, 0)
+        else:
+            self.driver.set_window_position(1200, 0)
 
         self.driver.get('https://skribbl.io/')
         WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.ID, 'home')))
         assert 'skribbl' in self.driver.title
+        
+        # ActionChains(self.driver).key_down(Keys.CONTROL).send_keys(Keys.SUBTRACT).key_up(Keys.CONTROL).perform()
+        self.driver.find_element(By.TAG_NAME, 'html').send_keys(Keys.CONTROL, Keys.SUBTRACT)
+        self.driver.find_element(By.TAG_NAME, 'html').send_keys(Keys.CONTROL, Keys.SUBTRACT)
 
         WebDriverWait(self.driver, 3).until(EC.presence_of_element_located((By.ID, 'cmpwelcomebtnyes')))
         try:
@@ -87,7 +112,7 @@ class Scraper:
 
         ## Number of rounds
         number_of_rounds_dropdown = Select(self.driver.find_element(By.ID, 'item-settings-rounds'))
-        number_of_rounds_dropdown.select_by_visible_text('10')
+        number_of_rounds_dropdown.select_by_visible_text(str(ROUND_COUNT))
 
         ## Get invite link
         invite_field = self.driver.find_element(By.ID, 'input-invite')
@@ -123,19 +148,32 @@ class Scraper:
 
     # from skribbl4me.py
     def detect_state(self):
-        screens : dict[str, WebElement] = {}
+        screens : dict[str, WebElement | None] = {}
+        
         screens['login'] = self.driver.find_element(By.ID, 'home') # initial login screen
-        screens['lobby'] = self.driver.find_element(By.ID, 'start-game') # custom lobby screen ('start-game' is a button with that ID which only displays when you're in the lobby - there is no dedicated lobby screen)
+
         screens['loading'] = self.driver.find_element(By.ID, 'load') # loading screen
         screens['game'] = self.driver.find_element(By.ID, 'game') # game screen
+        
+        # must be after game screen
+        try:
+            screens['lobby'] = self.driver.find_element(By.CSS_SELECTOR, '.room.show') # custom lobby screen ('start-game' is a button with that ID which only displays when you're in the lobby - there is no dedicated lobby screen)
+        except NoSuchElementException:
+            screens['lobby'] = None
+
         displayed = []
 
         for screen_id, screen in screens.items():
             try:
-                if screen.is_displayed():
-                    displayed.append(screen_id)
+                if screen:
+                    if screen.is_displayed():
+                        if screen_id == 'lobby':
+                            displayed.remove('game')
+                        displayed.append(screen_id)
             except StaleElementReferenceException:
                 pass
+        
+
 
         if len(displayed) == 0:
             return 'unknown'
@@ -177,15 +215,27 @@ class Scraper:
     def loop(self):
 
         last_game_state = None
+        last_chosen_word = None
 
         while True:
+
+            if global_stop_flag:
+                break
+
             state = self.detect_state()
-            print(f'{self.role}: {state}')
+            # print(f'{self.role}: {state}')
             
             match state:
+                case 'lobby':
+                    if self.role == 'host':
+                        self.host__start_game()
+
+                    sleep(LOOP_DELAY)
+                    continue
+                    
                 case 'game':
                     game_state = self.detect_game_state()
-                    print(f'{self.role}: {state}/{game_state}')
+                    # print(f'{self.role}: {state}/{game_state}')
                 
                     if game_state == 'drawing__word_select':
                         if game_state != last_game_state:
@@ -197,6 +247,7 @@ class Scraper:
                                 log_word(button.text)
 
                             try:
+                                last_chosen_word = word_select_buttons[0].text
                                 word_select_buttons[0].click()
                             except (ElementNotInteractableException, NoSuchElementException):
                                 pass
@@ -207,6 +258,12 @@ class Scraper:
                     elif game_state == 'drawing':
                         if game_state != last_game_state:
                             last_game_state = game_state
+
+                            sleep(1) # ensure overlay is gone
+
+                            self.other.guess(last_chosen_word)
+
+                        
                     
                     elif game_state == 'waiting_for_round':
                         if game_state != last_game_state:
@@ -218,11 +275,27 @@ class Scraper:
 
             sleep(LOOP_DELAY)
             continue
-            
+    
+    def guess(self, word):
+        # #game > #game-wrapper #game-chat > .chat-container > form > input
+        guess_input = self.driver.find_element(By.ID, 'game-wrapper').find_element(By.ID, 'game-chat').find_element(By.CLASS_NAME, 'chat-container').find_element(By.TAG_NAME, 'form').find_element(By.TAG_NAME, 'input')
+        
+        try:
+            guess_input.send_keys(word)
+            guess_input.send_keys('\n')
+        except ElementNotInteractableException:
+            print('Guess input field is not interactable')
+
 
 if __name__ == '__main__':
+    print('Starting drivers and logging in... (this may take a while)')
+    print('Once the threads start, you can exit the program by pressing enter in the terminal.')
+
     host = Scraper('host', 'msedgedriver.exe')
     player = Scraper('player', 'msedgedriver.exe')
+
+    host.set_other(player)
+    player.set_other(host)
 
     host_link = host.host__host_game()
 
@@ -238,5 +311,14 @@ if __name__ == '__main__':
     player_thread.start()
     host_thread.start()
 
-    print('Threads started')
-    input()
+    print('Threads started!')
+    input('>> Press enter at any time to exit <<')
+    print('Exiting, please wait...')
+
+    global_stop_flag = True
+
+    player.driver.quit()
+    host.driver.quit()
+
+    player_thread.join()
+    host_thread.join()
