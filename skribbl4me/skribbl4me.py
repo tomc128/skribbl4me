@@ -85,7 +85,7 @@ def detect_state() -> str:
 
 def detect_game_state() -> str:
     try:
-        toolbar = driver.find_element(By.CLASS_NAME, 'game-toolbar')
+        toolbar = driver.find_element(By.ID, 'game-toolbar')
         if toolbar.is_displayed():
             return 'drawing'
     except NoSuchElementException:
