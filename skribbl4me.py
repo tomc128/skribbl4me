@@ -64,7 +64,7 @@ def detect_state() -> str:
     screens : dict[str, WebElement] = {}
     screens['login'] = driver.find_element(By.ID, 'home') # initial login screen
     screens['lobby'] = driver.find_element(By.ID, 'start-game') # custom lobby screen ('start-game' is a button with that ID which only displays when you're in the lobby - there is no dedicated lobby screen)
-    screens['loading']= driver.find_element(By.ID, 'load') # loading screen
+    screens['loading'] = driver.find_element(By.ID, 'load') # loading screen
     screens['game'] = driver.find_element(By.ID, 'game') # game screen
     displayed = []
 
@@ -126,7 +126,10 @@ def get_word_hint() -> str:
     hints = hint_container.find_elements(By.CLASS_NAME, 'hint')
 
     for hint in hints:
-        word_hint += hint.text
+        if hint.text == '':
+            word_hint += ' '
+        else:
+            word_hint += hint.text
 
         print(f'Hint: `{hint.text}`')
 
