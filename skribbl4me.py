@@ -112,6 +112,13 @@ def make_guess() -> None:
         print('No word detected on page')
         return
 
+    guess_input = driver.find_element(By.ID, 'inputChat')
+
+    if guess_input.get_attribute('value'):
+        print('User is typing, skipping guess')
+        return
+
+
     num_hints = len(re.findall('[a-z]', word_hint, re.IGNORECASE))
     regex = generate_regex(word_hint)
 
@@ -126,7 +133,6 @@ def make_guess() -> None:
 
     print(f'{num_hints}/2 hints. Guessing {guess}, one of {len(possible_words)} possible words. Guessed {len(guessed_words)} words so far')
 
-    guess_input = driver.find_element(By.ID, 'inputChat')
     guess_input.send_keys(guess)
     guess_input.send_keys('\n')
     
