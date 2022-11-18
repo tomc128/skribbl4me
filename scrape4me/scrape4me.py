@@ -7,7 +7,7 @@ from os import path
 from typing import Literal
 from time import sleep
 
-import clipboard
+from threading import Thread
 
 from selenium import webdriver
 from selenium.common.exceptions import (NoSuchElementException, StaleElementReferenceException, ElementNotInteractableException)
@@ -20,7 +20,23 @@ from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.support.ui import Select
+from selenium.webdriver.support.select import Select
+
+
+
+
+LOOP_DELAY = 2
+RAW_WORD_ENCOUNTERS_FILE = './word_encounters.txt'
+
+
+
+def log_word(word: str) -> None:
+    if not word.strip():
+        return
+        
+    print(f'Logging word: {word}')
+    with open(RAW_WORD_ENCOUNTERS_FILE, 'a', encoding='utf-8') as file:
+        file.write(f'{word}\n')
 
 
 
@@ -34,7 +50,7 @@ class Scraper:
         self.__init_driver()
     
     def __init_driver(self):
-        driver_executable = path.join(path.dirname(path.abspath(__file__)), 'lib', 'webdriver', self.executable_name)
+        driver_executable = path.join(path.dirname(path.abspath(__file__)), '../', 'lib', 'webdriver', self.executable_name)
 
         browser = 'edge' if 'edgedriver' in driver_executable else 'chrome'
 
@@ -58,7 +74,6 @@ class Scraper:
         except NoSuchElementException:
             pass
     
-
     def host__host_game(self) -> str:
         create_room_button = self.driver.find_element(By.ID, 'home').find_element(By.CLASS_NAME, 'button-create')
         create_room_button.click()
@@ -106,6 +121,104 @@ class Scraper:
         start_game_button = self.driver.find_element(By.ID, 'start-game')
         start_game_button.click()
 
+    # from skribbl4me.py
+    def detect_state(self):
+        screens : dict[str, WebElement] = {}
+        screens['login'] = self.driver.find_element(By.ID, 'home') # initial login screen
+        screens['lobby'] = self.driver.find_element(By.ID, 'start-game') # custom lobby screen ('start-game' is a button with that ID which only displays when you're in the lobby - there is no dedicated lobby screen)
+        screens['loading'] = self.driver.find_element(By.ID, 'load') # loading screen
+        screens['game'] = self.driver.find_element(By.ID, 'game') # game screen
+        displayed = []
+
+        for screen_id, screen in screens.items():
+            try:
+                if screen.is_displayed():
+                    displayed.append(screen_id)
+            except StaleElementReferenceException:
+                pass
+
+        if len(displayed) == 0:
+            return 'unknown'
+        elif len(displayed) == 1:
+            return displayed[0]
+        else:
+            return 'multiple'
+
+    # adapted from skribbl4me.py
+    def detect_game_state(self) -> str:
+        try:
+            toolbar = self.driver.find_element(By.ID, 'game-toolbar')
+            if toolbar.is_displayed():
+                return 'drawing'
+        except NoSuchElementException:
+            pass
+
+        try:
+            overlay = self.driver.find_element(By.ID, 'game-canvas').find_element(By.CLASS_NAME, 'overlay-content')
+            if 'top: 0' in overlay.get_attribute('style'):
+                word_select = self.driver.find_element(By.ID, 'game-canvas').find_element(By.CLASS_NAME, 'overlay-content').find_element(By.CLASS_NAME, 'words')
+                if 'show' in word_select.get_attribute('class'):
+                    return 'drawing__word_select'
+                else:
+                    return 'waiting_for_round'
+        except NoSuchElementException:
+            pass
+
+        try:
+            my_player = self.driver.find_element(By.ID, 'game-players').find_element(By.CLASS_NAME, 'players-list').find_element(By.CLASS_NAME, 'me')
+
+            if 'guessed' in my_player.find_element(By.XPATH, '..').find_element(By.XPATH, '..').get_attribute('class'):
+                return 'guessed'
+        except NoSuchElementException:
+            pass
+        
+        return 'guessing'
+
+    def loop(self):
+
+        last_game_state = None
+
+        while True:
+            state = self.detect_state()
+            print(f'{self.role}: {state}')
+            
+            match state:
+                case 'game':
+                    game_state = self.detect_game_state()
+                    print(f'{self.role}: {state}/{game_state}')
+                
+                    if game_state == 'drawing__word_select':
+                        if game_state != last_game_state:
+                            last_game_state = game_state
+                            word_select = self.driver.find_element(By.ID, 'game-canvas').find_element(By.CLASS_NAME, 'overlay-content').find_element(By.CLASS_NAME, 'words')
+                            word_select_buttons = word_select.find_elements(By.CLASS_NAME, 'word')
+
+                            for button in word_select_buttons:
+                                log_word(button.text)
+
+                            try:
+                                word_select_buttons[0].click()
+                            except (ElementNotInteractableException, NoSuchElementException):
+                                pass
+                        else:
+                            # already logged these words, so just wait for the round to start
+                            pass
+
+                    elif game_state == 'drawing':
+                        if game_state != last_game_state:
+                            last_game_state = game_state
+                    
+                    elif game_state == 'waiting_for_round':
+                        if game_state != last_game_state:
+                            last_game_state = game_state
+                    
+                    elif game_state == 'guessed':
+                        if game_state != last_game_state:
+                            last_game_state = game_state
+
+            sleep(LOOP_DELAY)
+            continue
+            
 
 if __name__ == '__main__':
     host = Scraper('host', 'msedgedriver.exe')
@@ -119,4 +232,11 @@ if __name__ == '__main__':
 
     host.host__start_game()
 
+    player_thread = Thread(target=player.loop)
+    host_thread = Thread(target=host.loop)
+
+    player_thread.start()
+    host_thread.start()
+
+    print('Threads started')
     input()
