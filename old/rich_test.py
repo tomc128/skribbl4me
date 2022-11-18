@@ -2,6 +2,7 @@ import time
 
 from rich import bar, box, print
 from rich.align import Align
+from rich.console import Console
 from rich.layout import Layout
 from rich.live import Live
 from rich.panel import Panel
@@ -37,6 +38,9 @@ with open('default_words.txt') as f:
     guessed_words = [next(f).strip() for _ in range(10)]
 
 
+console = Console()
+
+
 layout = Layout()
 
 layout.split_row(
@@ -48,13 +52,14 @@ layout['right'].split_column(
     Layout(Panel(Align(current_hint, align='center', vertical='middle'), title='Current Hint'), name='top', size=5),
     Layout(Panel(Pretty(guessed_words), title='Guessed Words'), name='guessed_words', ratio=1),
     Layout(Panel(current_guess_progress, padding=0, box=box.SIMPLE), name='status', size=3),
-    Layout(Panel('Guessed "word"\nGuessed "word2"'), name='console', ratio=1),
+    Layout(Panel('console'), name='console', ratio=1),
 )
 
 layout['left'].split_column(
     Layout(Panel('Round 1/3\n30s remaining\nDrawer: Player 1', title='Game Stats'), name='game_stats', size=5),
     Layout(Panel(player_table, title='Players'), name='players'),
 )
+
 
 
     
