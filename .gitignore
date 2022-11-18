@@ -1,5 +1,2 @@
-extension.crx
 __pycache__
-*driver*.zip
-Driver_Notes
-*driver*.exe
+lib/

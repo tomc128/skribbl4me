@@ -1,5 +1,6 @@
 import argparse
 from zipfile import ZipFile
+from os import path
 
 import requests
 from requests.exceptions import RequestException
@@ -11,6 +12,9 @@ def main():
     parser.add_argument('-v', '--version', help='Browser version', required=True)
     parser.add_argument('-p', '--platform', help='Platform', required=True)
     args = parser.parse_args()
+
+    driver_folder = path.join(path.dirname(path.abspath(__file__)), 'lib', 'webdriver')
+    extension_folder = path.join(path.dirname(path.abspath(__file__)), 'lib', 'autodraw')
 
     browser = args.browser
     browser_version = args.version
@@ -25,12 +29,14 @@ def main():
             print(f'Error: {e}')
             return
 
-        with open(f'edgedriver_{platform}.zip', 'wb') as file:
+        zip_path = path.join(driver_folder, f'edgedriver_{browser_version}_{platform}.zip')
+
+        with open(zip_path, 'wb') as file:
             file.write(webdriver_req.content)
 
         print('Extracting...')
-        with ZipFile('edgedriver_win64.zip', 'r') as zip:
-            zip.extractall()
+        with ZipFile(zip_path, 'r') as zip:
+            zip.extractall(path=driver_folder)
         
     elif browser == 'chrome':
         print(f'Downloading Chrome WebDriver version {browser_version}...')
@@ -41,11 +47,13 @@ def main():
             print(f'Error: {e}')
             return
 
-        with open(f'chromedriver_{platform}.zip', 'wb') as file:
+        zip_path = path.join(driver_folder, f'chromedriver_{browser_version}_{platform}.zip')
+
+        with open(zip_path, 'wb') as file:
             file.write(webdriver_req.content)
 
         print('Extracting...')
-        with ZipFile(f'chromedriver_{platform}.zip', 'r') as zip:
+        with ZipFile(zip_path, 'r') as zip:
             zip.extractall()
 
     print('Done!')
@@ -53,7 +61,10 @@ def main():
     print('Downloading AutoDraw extension...')
     extension_url = f'https://clients2.google.com/service/update2/crx?response=redirect&prodversion={browser_version}&acceptformat=crx2,crx3&x=id%3D{"bpnefockcbbpkbahgkkacjmebfheacjb"}%26uc'
     extension_req = requests.get(extension_url, allow_redirects=True, timeout=10)
-    with open('extension.crx', 'wb') as file:
+
+    crx_path = path.join(extension_folder, f'autodraw.crx')
+
+    with open(crx_path, 'wb') as file:
         file.write(extension_req.content)
 
 
