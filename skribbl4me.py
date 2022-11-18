@@ -2,15 +2,18 @@ import argparse
 import random
 import re
 from time import sleep
+from os import path
 
 from selenium import webdriver
-from selenium.common.exceptions import (NoSuchElementException,
-                                        StaleElementReferenceException)
+from selenium.common.exceptions import (NoSuchElementException, StaleElementReferenceException, ElementNotInteractableException)
 from selenium.webdriver.common.by import By
-from selenium.webdriver.edge.options import Options
+from selenium.webdriver.edge.options import Options as EdgeOptions
+from selenium.webdriver.edge.service import Service as EdgeService
+from selenium.webdriver.chrome.options import Options as ChromeOptions
+from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support.wait import WebDriverWait
 
 LOOP_UPDATE_DELAY = 0.5
 GUESS_DELAY_RANGE = [(4, 8), (3, 6), (1, 2)]
@@ -19,17 +22,30 @@ GUESS_DELAY_RANGE = [(4, 8), (3, 6), (1, 2)]
 def init_driver(driver_executable: str) -> None:
     global driver
 
-    options = Options()
-    options.add_extension('extension.crx')
-    driver = webdriver.Edge(executable_path=f'./{driver_executable}', options=options)
+    driver_executable = path.join(path.dirname(path.abspath(__file__)), 'lib', 'webdriver', driver_executable)
+    autodraw_extension = path.join(path.dirname(path.abspath(__file__)), 'lib', 'autodraw', 'autodraw.crx')
+
+    browser = 'edge' if 'edgedriver' in driver_executable else 'chrome'
+
+    if browser == 'edge':
+        options = EdgeOptions()
+        options.add_extension(autodraw_extension)
+        service = EdgeService(executable_path=driver_executable)
+        driver = webdriver.Edge(service=service, options=options)
+    else:
+        options = ChromeOptions()
+        options.add_extension(autodraw_extension)
+        service = ChromeService(executable_path=driver_executable)
+        driver = webdriver.Chrome(service=service, options=options)
+
 
     driver.get('https://skribbl.io/')
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, 'screenLogin')))
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, 'home')))
     assert 'skribbl' in driver.title
 
-    WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.ID, 'cmpbntyestxt')))
+    WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.ID, 'cmpwelcomebtnyes')))
     try:
-        consent_button = driver.find_element(By.ID, 'cmpbntyestxt')
+        consent_button = driver.find_element(By.ID, 'cmpwelcomebtnyes')
         consent_button.click()
     except NoSuchElementException:
         pass
@@ -46,11 +62,10 @@ def init_word_list() -> None:
 
 def detect_state() -> str:
     screens : dict[str, WebElement] = {}
-    screens['login'] = driver.find_element(By.ID, 'screenLogin') # initial login screen
-    screens['lobby'] = driver.find_element(By.ID, 'screenLobby') # custom lobby screen
-    screens['loading']= driver.find_element(By.ID, 'screenLoading') # loading screen
-    screens['browser'] = driver.find_element(By.ID, 'screenBrowser') # ? unknown screen
-    screens['game'] = driver.find_element(By.ID, 'screenGame') # game screen
+    screens['login'] = driver.find_element(By.ID, 'home') # initial login screen
+    screens['lobby'] = driver.find_element(By.ID, 'start-game') # custom lobby screen ('start-game' is a button with that ID which only displays when you're in the lobby - there is no dedicated lobby screen)
+    screens['loading'] = driver.find_element(By.ID, 'load') # loading screen
+    screens['game'] = driver.find_element(By.ID, 'game') # game screen
     displayed = []
 
     for screen_id, screen in screens.items():
@@ -70,22 +85,27 @@ def detect_state() -> str:
 
 def detect_game_state() -> str:
     try:
-        toolbar = driver.find_element(By.CLASS_NAME, 'containerToolbar')
+        toolbar = driver.find_element(By.CLASS_NAME, 'game-toolbar')
         if toolbar.is_displayed():
             return 'drawing'
     except NoSuchElementException:
         pass
 
     try:
-        overlay = driver.find_element(By.ID, 'overlay')
-        if overlay.is_displayed():
+        # #game-canvas > .overlay-content. but it is never hidden - its hidden when "top: -100%" and shown when "top: 0%"
+        overlay = driver.find_element(By.ID, 'game-canvas').find_element(By.CLASS_NAME, 'overlay-content')
+        if 'top: 0' in overlay.get_attribute('style'):
             return 'waiting_for_round'
     except NoSuchElementException:
         pass
 
     try:
-        my_player = driver.find_element(By.ID, 'containerGamePlayers').find_element(By.XPATH, '//div[contains(text(), "(You)")]/../..')
-        if 'guessedWord' in my_player.get_attribute('class'):
+        # #game-players > .players-list > .player [.guessed] > .player-info > .player-name [.me]
+        # my_player if it has the class .me
+        # guessed if the grandparent has the class .guessed
+        my_player = driver.find_element(By.ID, 'game-players').find_element(By.CLASS_NAME, 'players-list').find_element(By.CLASS_NAME, 'me')
+
+        if 'guessed' in my_player.find_element(By.XPATH, '..').find_element(By.XPATH, '..').get_attribute('class'):
             return 'guessed'
     except NoSuchElementException:
         pass
@@ -98,7 +118,22 @@ def generate_regex(word_hint) -> str:
 
 
 def get_word_hint() -> str:
-    return driver.find_element(By.ID, 'currentWord').text
+    # #game-word > .hints > .container > many .hint elements - the ones with the class 'uncover' are the ones that are uncovered
+    word_hint = ''
+
+    parent = driver.find_element(By.ID, 'game-word')
+    hint_container = parent.find_element(By.CLASS_NAME, 'hints').find_element(By.CLASS_NAME, 'container')
+    hints = hint_container.find_elements(By.CLASS_NAME, 'hint')
+
+    for hint in hints:
+        if hint.text == '':
+            word_hint += ' '
+        else:
+            word_hint += hint.text
+
+        print(f'Hint: `{hint.text}`')
+
+    return word_hint
 
 
 def clamp(value: int, min_value: int, max_value: int) -> int:
@@ -112,8 +147,9 @@ def make_guess() -> None:
         print('No word detected on page')
         return
 
-    guess_input = driver.find_element(By.ID, 'inputChat')
-
+    # #game > #game-wrapper #game-chat > .chat-container > form > input
+    guess_input = driver.find_element(By.ID, 'game-wrapper').find_element(By.ID, 'game-chat').find_element(By.CLASS_NAME, 'chat-container').find_element(By.TAG_NAME, 'form').find_element(By.TAG_NAME, 'input')
+    
     if guess_input.get_attribute('value'):
         print('User is typing, skipping guess')
         return
@@ -133,8 +169,11 @@ def make_guess() -> None:
 
     print(f'{num_hints}/2 hints. Guessing {guess}, one of {len(possible_words)} possible words. Guessed {len(guessed_words)} words so far')
 
-    guess_input.send_keys(guess)
-    guess_input.send_keys('\n')
+    try:
+        guess_input.send_keys(guess)
+        guess_input.send_keys('\n')
+    except ElementNotInteractableException:
+        print('Guess input field is not interactable')
     
     delay = random.uniform(*GUESS_DELAY_RANGE[clamp(num_hints, 0, 2)])
     print(f'Waiting {delay} seconds...')
@@ -150,11 +189,8 @@ def game_loop() -> None:
             break
 
         match game_state:
-            case 'drawing':
-                pass
-            case 'waiting_for_round':
-                pass
-            case 'guessed':
+            case 'drawing' | 'waiting_for_round' | 'guessed':
+                print(f'Waiting until we can guess ({game_state})')
                 pass
             case 'guessing':
                 make_guess()
@@ -166,19 +202,11 @@ def game_loop() -> None:
 
 def on_state_change(state: str) -> None:
     match state:
-        case 'login':
-            pass
-        case 'lobby':
-            pass
-        case 'loading':
-            pass
-        case 'browser':
+        case 'login' | 'lobby' | 'loading':
             pass
         case 'game':
             game_loop()
-        case 'unknown':
-            pass
-        case 'multiple':
+        case 'unknown' | 'multiple':
             pass
 
 
