@@ -2,15 +2,19 @@ import argparse
 import random
 import re
 from time import sleep
+from os import path
 
 from selenium import webdriver
 from selenium.common.exceptions import (NoSuchElementException,
                                         StaleElementReferenceException)
 from selenium.webdriver.common.by import By
-from selenium.webdriver.edge.options import Options
+from selenium.webdriver.edge.options import Options as EdgeOptions
+from selenium.webdriver.edge.service import Service as EdgeService
+from selenium.webdriver.chrome.options import Options as ChromeOptions
+from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support.wait import WebDriverWait
 
 LOOP_UPDATE_DELAY = 0.5
 GUESS_DELAY_RANGE = [(4, 8), (3, 6), (1, 2)]
@@ -19,17 +23,30 @@ GUESS_DELAY_RANGE = [(4, 8), (3, 6), (1, 2)]
 def init_driver(driver_executable: str) -> None:
     global driver
 
-    options = Options()
-    options.add_extension('extension.crx')
-    driver = webdriver.Edge(executable_path=f'./{driver_executable}', options=options)
+    driver_executable = path.join(path.dirname(path.abspath(__file__)), 'lib', 'webdriver', driver_executable)
+    autodraw_extension = path.join(path.dirname(path.abspath(__file__)), 'lib', 'autodraw', 'autodraw.crx')
+
+    browser = 'edge' if 'edgedriver' in driver_executable else 'chrome'
+
+    if browser == 'edge':
+        options = EdgeOptions()
+        options.add_extension(autodraw_extension)
+        service = EdgeService(executable_path=driver_executable)
+        driver = webdriver.Edge(service=service, options=options)
+    else:
+        options = ChromeOptions()
+        options.add_extension(autodraw_extension)
+        service = ChromeService(executable_path=driver_executable)
+        driver = webdriver.Chrome(service=service, options=options)
+
 
     driver.get('https://skribbl.io/')
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, 'screenLogin')))
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, 'home')))
     assert 'skribbl' in driver.title
 
-    WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.ID, 'cmpbntyestxt')))
+    WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.ID, 'cmpwelcomebtnyes')))
     try:
-        consent_button = driver.find_element(By.ID, 'cmpbntyestxt')
+        consent_button = driver.find_element(By.ID, 'cmpwelcomebtnyes')
         consent_button.click()
     except NoSuchElementException:
         pass
