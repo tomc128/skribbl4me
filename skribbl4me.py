@@ -5,8 +5,7 @@ from time import sleep
 from os import path
 
 from selenium import webdriver
-from selenium.common.exceptions import (NoSuchElementException,
-                                        StaleElementReferenceException)
+from selenium.common.exceptions import (NoSuchElementException, StaleElementReferenceException, ElementNotInteractableException)
 from selenium.webdriver.common.by import By
 from selenium.webdriver.edge.options import Options as EdgeOptions
 from selenium.webdriver.edge.service import Service as EdgeService
@@ -86,22 +85,27 @@ def detect_state() -> str:
 
 def detect_game_state() -> str:
     try:
-        toolbar = driver.find_element(By.CLASS_NAME, 'containerToolbar')
+        toolbar = driver.find_element(By.CLASS_NAME, 'game-toolbar')
         if toolbar.is_displayed():
             return 'drawing'
     except NoSuchElementException:
         pass
 
     try:
-        overlay = driver.find_element(By.ID, 'overlay')
-        if overlay.is_displayed():
+        # #game-canvas > .overlay-content. but it is never hidden - its hidden when "top: -100%" and shown when "top: 0%"
+        overlay = driver.find_element(By.ID, 'game-canvas').find_element(By.CLASS_NAME, 'overlay-content')
+        if 'top: 0' in overlay.get_attribute('style'):
             return 'waiting_for_round'
     except NoSuchElementException:
         pass
 
     try:
-        my_player = driver.find_element(By.ID, 'containerGamePlayers').find_element(By.XPATH, '//div[contains(text(), "(You)")]/../..')
-        if 'guessedWord' in my_player.get_attribute('class'):
+        # #game-players > .players-list > .player [.guessed] > .player-info > .player-name [.me]
+        # my_player if it has the class .me
+        # guessed if the grandparent has the class .guessed
+        my_player = driver.find_element(By.ID, 'game-players').find_element(By.CLASS_NAME, 'players-list').find_element(By.CLASS_NAME, 'me')
+
+        if 'guessed' in my_player.find_element(By.XPATH, '..').find_element(By.XPATH, '..').get_attribute('class'):
             return 'guessed'
     except NoSuchElementException:
         pass
@@ -123,6 +127,8 @@ def get_word_hint() -> str:
 
     for hint in hints:
         word_hint += hint.text
+
+        print(f'Hint: `{hint.text}`')
 
     return word_hint
 
@@ -160,8 +166,11 @@ def make_guess() -> None:
 
     print(f'{num_hints}/2 hints. Guessing {guess}, one of {len(possible_words)} possible words. Guessed {len(guessed_words)} words so far')
 
-    guess_input.send_keys(guess)
-    guess_input.send_keys('\n')
+    try:
+        guess_input.send_keys(guess)
+        guess_input.send_keys('\n')
+    except ElementNotInteractableException:
+        print('Guess input field is not interactable')
     
     delay = random.uniform(*GUESS_DELAY_RANGE[clamp(num_hints, 0, 2)])
     print(f'Waiting {delay} seconds...')
@@ -177,11 +186,8 @@ def game_loop() -> None:
             break
 
         match game_state:
-            case 'drawing':
-                pass
-            case 'waiting_for_round':
-                pass
-            case 'guessed':
+            case 'drawing' | 'waiting_for_round' | 'guessed':
+                print(f'Waiting until we can guess ({game_state})')
                 pass
             case 'guessing':
                 make_guess()
