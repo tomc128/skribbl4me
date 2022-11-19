@@ -2,7 +2,7 @@
 # create a private game and play against each other. It should collect data about which words are used. It should repeat this process 
 # for ever. Write for me copilot
 
-
+import argparse
 from os import path
 from typing import Literal
 from time import sleep
@@ -309,11 +309,17 @@ class Scraper:
 
 
 if __name__ == '__main__':
+
+    parser = argparse.ArgumentParser(description='Skribbl.io bot')
+    parser.add_argument('-d', '--driver', required=True, help='Name of the webdriver executable (in ../lib or PATH)')
+    parser.add_argument('-p', '--path-enable', action='store_true', help='Enable PATH search for webdriver executable (instead of searching ../lib)')
+    args = parser.parse_args()
+
     print('Starting drivers and logging in... (this may take a while)')
     print('Once the threads start, you can exit the program by pressing enter in the terminal.')
 
-    host = Scraper('host', 'msedgedriver.exe')
-    player = Scraper('player', 'msedgedriver.exe')
+    host = Scraper('host', args.driver, webdriver_is_on_path=args.path_enable)
+    player = Scraper('player', args.driver, webdriver_is_on_path=args.path_enable)
 
     host.set_other(player)
     player.set_other(host)
