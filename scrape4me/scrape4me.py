@@ -313,7 +313,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Skribbl.io bot')
     parser.add_argument('-d', '--driver', required=True, help='Name of the webdriver executable (in ../lib or PATH)')
     parser.add_argument('-p', '--path-enable', action='store_true', help='Enable PATH search for webdriver executable (instead of searching ../lib)')
-    parser.add_argument('-h', '--headless', action='store_true', help='Run webdriver in headless mode')
+    parser.add_argument('--headless', action='store_true', help='Run webdriver in headless mode')
     args = parser.parse_args()
 
     print('Starting drivers and logging in... (this may take a while)')
