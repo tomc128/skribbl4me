@@ -27,7 +27,13 @@ from selenium.webdriver.common.keys import Keys
 
 
 LOOP_DELAY = 0.5
-RAW_WORD_ENCOUNTERS_FILE = 'word_encounters.txt'
+
+# Normal values are 10 and 3. For a slow PC (like a raspberry pi) use 20 and 10
+PAGE_LOAD_TIMEOUT = 10
+ELEMENT_SEARCH_TIMEOUT = 3
+
+RAW_WORD_ENCOUNTERS_FILE_NAME = 'word_encounters.txt'
+RAW_WORD_ENCOUNTERS_FILE_PATH = path.join(path.dirname(path.abspath(__file__)), RAW_WORD_ENCOUNTERS_FILE_NAME)
 
 # between 2 and 10 (inclusive) - 10 is most efficient
 ROUND_COUNT = 10
@@ -37,15 +43,14 @@ HEADLESS = False
 global_stop_flag = False
 
 
-def log_word(word: str) -> None:
-    if not word.strip():
-        return
+def log_words(words) -> None:
+    words = [word.strip() for word in words if word.strip()] # Remove empty strings
 
-    file_path = path.join(path.dirname(path.abspath(__file__)), RAW_WORD_ENCOUNTERS_FILE)
+    print('Logging ', words)
 
-    print(f'Logging word: {word}')
-    with open(file_path, 'a', encoding='utf-8') as file:
-        file.write(f'{word}\n')
+    with open(RAW_WORD_ENCOUNTERS_FILE_PATH, 'a', encoding='utf-8') as file:
+        file.write('\n'.join(words))
+        file.write('\n')
 
 
 
@@ -94,15 +99,15 @@ class Scraper:
             self.driver.set_window_position(1200, 0)
 
         self.driver.get('https://skribbl.io/')
-        WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.ID, 'home')))
+        WebDriverWait(self.driver, PAGE_LOAD_TIMEOUT).until(EC.presence_of_element_located((By.ID, 'home')))
         assert 'skribbl' in self.driver.title
         
         # ActionChains(self.driver).key_down(Keys.CONTROL).send_keys(Keys.SUBTRACT).key_up(Keys.CONTROL).perform()
         self.driver.find_element(By.TAG_NAME, 'html').send_keys(Keys.CONTROL, Keys.SUBTRACT)
         self.driver.find_element(By.TAG_NAME, 'html').send_keys(Keys.CONTROL, Keys.SUBTRACT)
 
-        WebDriverWait(self.driver, 3).until(EC.presence_of_element_located((By.ID, 'cmpwelcomebtnyes')))
         try:
+            WebDriverWait(self.driver, ELEMENT_SEARCH_TIMEOUT).until(EC.presence_of_element_located((By.ID, 'cmpwelcomebtnyes')))
             consent_button = self.driver.find_element(By.ID, 'cmpwelcomebtnyes')
             consent_button.click()
         except NoSuchElementException:
@@ -112,7 +117,7 @@ class Scraper:
         create_room_button = self.driver.find_element(By.ID, 'home').find_element(By.CLASS_NAME, 'button-create')
         create_room_button.click()
 
-        WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.ID, 'game-canvas')))
+        WebDriverWait(self.driver, PAGE_LOAD_TIMEOUT).until(EC.presence_of_element_located((By.ID, 'game-canvas')))
         sleep(3)
 
         ## Draw time
@@ -122,6 +127,10 @@ class Scraper:
         ## Number of rounds
         number_of_rounds_dropdown = Select(self.driver.find_element(By.ID, 'item-settings-rounds'))
         number_of_rounds_dropdown.select_by_visible_text(str(ROUND_COUNT))
+
+        ## Number of words to choose from
+        number_of_words_dropdown = Select(self.driver.find_element(By.ID, 'item-settings-wordcount'))
+        number_of_words_dropdown.select_by_visible_text('5')
 
         ## Get invite link
         invite_field = self.driver.find_element(By.ID, 'input-invite')
@@ -134,7 +143,7 @@ class Scraper:
 
     def player__join_game(self, link: str):
         self.driver.get(link)
-        WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.ID, 'home')))
+        WebDriverWait(self.driver, PAGE_LOAD_TIMEOUT).until(EC.presence_of_element_located((By.ID, 'home')))
         assert 'skribbl' in self.driver.title
 
         sleep(1) # additional time just in case, as previous page also had #home element
@@ -252,8 +261,11 @@ class Scraper:
                             word_select = self.driver.find_element(By.ID, 'game-canvas').find_element(By.CLASS_NAME, 'overlay-content').find_element(By.CLASS_NAME, 'words')
                             word_select_buttons = word_select.find_elements(By.CLASS_NAME, 'word')
 
+                            words = []
                             for button in word_select_buttons:
-                                log_word(button.text)
+                                words.append(button.text)
+
+                            log_words(words)
 
                             try:
                                 last_chosen_word = word_select_buttons[0].text
