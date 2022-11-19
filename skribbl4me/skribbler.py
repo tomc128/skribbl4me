@@ -21,28 +21,32 @@ class Skribbler:
     def __init__(self, driver_executable: str, autodraw_extension: str, word_list: list[str]) -> None:
         """Initializes the Skribbler class."""
         self.word_list = word_list
+        self.driver_is_running = False
+        self.website_is_loaded = False
+        self.driver_executable = driver_executable
+        self.autodraw_extension = autodraw_extension
 
-        self.__init_driver(driver_executable, autodraw_extension)
 
-
-    def __init_driver(self, driver_executable: str, autodraw_extension: str) -> None:
+    def init_driver(self) -> None:
         """Initializes the Selenium driver."""
-        browser = 'edge' if 'edgedriver' in driver_executable else 'chrome'
+        browser = 'edge' if 'edgedriver' in self.driver_executable else 'chrome'
 
         if browser == 'edge':
             options = EdgeOptions()
-            options.add_extension(autodraw_extension)
-            service = EdgeService(executable_path=driver_executable)
+            options.add_extension(self.autodraw_extension)
+            service = EdgeService(executable_path=self.driver_executable)
             self.driver = webdriver.Edge(service=service, options=options)
         
         else:
             options = ChromeOptions()
-            options.add_extension(autodraw_extension)
-            service = ChromeService(executable_path=driver_executable)
+            options.add_extension(self.autodraw_extension)
+            service = ChromeService(executable_path=self.driver_executable)
             self.driver = webdriver.Chrome(service=service, options=options)
+        
+        self.driver_is_running = True
             
 
-    def load_site(self) -> None:
+    def load_website(self) -> None:
         """Loads the skribbl.io website and accepts cookies."""
         self.driver.get('https://skribbl.io')
         WebDriverWait(self.driver, self.PAGE_LOAD_TIMEOUT).until(EC.presence_of_element_located((By.ID, 'home')))
@@ -54,3 +58,5 @@ class Skribbler:
             consent_button.click()
         except (NoSuchElementException, TimeoutException):
             pass
+            
+        self.website_is_loaded = True
