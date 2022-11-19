@@ -148,10 +148,11 @@ class Skribbler:
 
                             number_of_hints = self.get_number_of_hints_given(word_hint)
 
-                            word_to_guess = self.choose_word_to_guess(hint_regex)
+                            possible_words = self.get_possible_words(hint_regex)
+                            word_to_guess = self.choose_word_to_guess(possible_words)
 
                             if word_to_guess:
-                                print(f'Guessing "{word_to_guess}"')
+                                print(f'Guessing "{word_to_guess}". One of {len(possible_words)} possible words from the hint "{word_hint}".')
                                 self.make_guess(word_to_guess)
 
                                 # Wait a random amount of time before guessing again
@@ -209,7 +210,9 @@ class Skribbler:
         try:
             # #game-canvas > .overlay-content. but it is never hidden - its hidden when "top: -100%" and shown when "top: 0%"
             overlay = self.driver.find_element(By.ID, 'game-canvas').find_element(By.CLASS_NAME, 'overlay-content')
-            if 'top: 0' in overlay.get_attribute('style'):
+            # if 'top: 0' in overlay.get_attribute('style'):
+            #     return 'waiting_for_round'
+            if 'top: -100%' not in overlay.get_attribute('style'):
                 return 'waiting_for_round'
         except NoSuchElementException:
             pass
@@ -253,14 +256,14 @@ class Skribbler:
         return '^' + ''.join(['\\w' if char == '_' else '\\W' if char == ' ' else char for char in word_hint]) + '$'
 
 
-    def choose_word_to_guess(self, hint_regex: str) -> str:
-        """Chooses a word to guess, using the hint regex."""
-        possible_words = [word for word in self.word_list if re.match(hint_regex, word)]
+    def get_possible_words(self, hint_regex: str) -> list[str]:
+        """Returns a list of possible words that match the hint regex."""
+        return [word for word in self.word_list if re.match(hint_regex, word)]
 
-        if not possible_words:
-            return ''
-        
-        return random.choice(possible_words)
+
+    def choose_word_to_guess(self, possible_words: list[str]) -> str:
+        """Chooses a word to guess from the list of possible words."""
+        return random.choice(possible_words) if possible_words else ''
 
 
     def make_guess(self, word: str) -> None:
