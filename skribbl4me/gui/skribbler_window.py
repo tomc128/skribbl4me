@@ -16,11 +16,12 @@ class SkribblerWindow(tk.Toplevel):
         self.title('skribbl4me : Skribbler')
 
         self._create_widgets()
-        self._place_widgets()
     
 
     def _create_widgets(self):
         self._create_wrapper()
+
+        self._create_temp_start_button()
     
     
     def _create_wrapper(self):
@@ -30,10 +31,18 @@ class SkribblerWindow(tk.Toplevel):
         self.wrapper.columnconfigure(0, weight=1)
         self.wrapper.rowconfigure(0, weight=1)
     
-
-    def _place_widgets(self):
         self.wrapper.columnconfigure(0, weight=1)
         self.wrapper.rowconfigure(0, weight=1)
         self.wrapper.rowconfigure(1, weight=1)
         self.wrapper.rowconfigure(2, weight=1)
+
+
+    def _create_temp_start_button(self):
+        self.temp_start_button = ttk.Button(self.wrapper, text='Start', command=self._on_temp_start_button_click)
+        self.temp_start_button.grid(row=0, column=0, sticky=tk.NSEW, **ELEMENT_PADDING)
+    
+
+    def _on_temp_start_button_click(self):
+        self.skribbler.start_skribbling()
+    
 
