@@ -10,7 +10,7 @@ from time import sleep
 from threading import Thread
 
 from selenium import webdriver
-from selenium.common.exceptions import (NoSuchElementException, StaleElementReferenceException, ElementNotInteractableException)
+from selenium.common.exceptions import (NoSuchElementException, StaleElementReferenceException, ElementNotInteractableException, TimeoutException)
 from selenium.webdriver.common.by import By
 from selenium.webdriver.edge.options import Options as EdgeOptions
 from selenium.webdriver.edge.service import Service as EdgeService
@@ -38,8 +38,6 @@ RAW_WORD_ENCOUNTERS_FILE_PATH = path.join(path.dirname(path.abspath(__file__)), 
 # between 2 and 10 (inclusive) - 10 is most efficient
 ROUND_COUNT = 10
 
-HEADLESS = False
-
 global_stop_flag = False
 
 
@@ -57,25 +55,25 @@ def log_words(words) -> None:
 
 class Scraper:
 
-    def __init__(self, role: Literal['host', 'player'], executable_name: str, webdriver_is_on_path: bool = False):
+    def __init__(self, role: Literal['host', 'player'], executable_name: str, webdriver_is_on_path: bool = False, headless: bool = False):
         self.other = None
         self.role = role
         self.executable_name = executable_name
         self.webdriver_is_on_path = webdriver_is_on_path
 
-        self.__init_driver()
+        self.__init_driver(headless=headless)
     
     def set_other(self, other: 'Scraper'):
         self.other = other
 
-    def __init_driver(self):
+    def __init_driver(self, headless: bool = False):
         driver_executable = path.join(path.dirname(path.abspath(__file__)), '../', 'lib', 'webdriver', self.executable_name)
 
         browser = 'edge' if 'edgedriver' in driver_executable else 'chrome'
 
         if browser == 'edge':
             options = EdgeOptions()
-            options.headless = HEADLESS
+            options.headless = headless
 
             if self.webdriver_is_on_path:
                 self.driver = webdriver.Edge(options=options)
@@ -84,7 +82,7 @@ class Scraper:
                 self.driver = webdriver.Edge(service=service, options=options)
         else:
             options = ChromeOptions()
-            options.headless = HEADLESS
+            options.headless = headless
 
             if self.webdriver_is_on_path:
                 self.driver = webdriver.Chrome(options=options)
@@ -111,6 +109,8 @@ class Scraper:
             consent_button = self.driver.find_element(By.ID, 'cmpwelcomebtnyes')
             consent_button.click()
         except NoSuchElementException:
+            pass
+        except TimeoutException:
             pass
     
     def host__host_game(self) -> str:
@@ -313,13 +313,14 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Skribbl.io bot')
     parser.add_argument('-d', '--driver', required=True, help='Name of the webdriver executable (in ../lib or PATH)')
     parser.add_argument('-p', '--path-enable', action='store_true', help='Enable PATH search for webdriver executable (instead of searching ../lib)')
+    parser.add_argument('-h', '--headless', action='store_true', help='Run webdriver in headless mode')
     args = parser.parse_args()
 
     print('Starting drivers and logging in... (this may take a while)')
     print('Once the threads start, you can exit the program by pressing enter in the terminal.')
 
-    host = Scraper('host', args.driver, webdriver_is_on_path=args.path_enable)
-    player = Scraper('player', args.driver, webdriver_is_on_path=args.path_enable)
+    host = Scraper('host', args.driver, webdriver_is_on_path=args.path_enable, headless=args.headless)
+    player = Scraper('player', args.driver, webdriver_is_on_path=args.path_enable, headless=args.headless)
 
     host.set_other(player)
     player.set_other(host)
