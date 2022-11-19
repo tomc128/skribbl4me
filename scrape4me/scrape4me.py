@@ -52,10 +52,11 @@ def log_word(word: str) -> None:
 
 class Scraper:
 
-    def __init__(self, role: Literal['host', 'player'], executable_name: str):
+    def __init__(self, role: Literal['host', 'player'], executable_name: str, webdriver_is_on_path: bool = False):
         self.other = None
         self.role = role
         self.executable_name = executable_name
+        self.webdriver_is_on_path = webdriver_is_on_path
 
         self.__init_driver()
     
@@ -70,13 +71,21 @@ class Scraper:
         if browser == 'edge':
             options = EdgeOptions()
             options.headless = HEADLESS
-            service = EdgeService(executable_path=driver_executable)
-            self.driver = webdriver.Edge(service=service, options=options)
+
+            if self.webdriver_is_on_path:
+                self.driver = webdriver.Edge(options=options)
+            else:
+                service = EdgeService(executable_path=driver_executable)
+                self.driver = webdriver.Edge(service=service, options=options)
         else:
             options = ChromeOptions()
             options.headless = HEADLESS
-            service = ChromeService(executable_path=driver_executable)
-            self.driver = webdriver.Chrome(service=service, options=options)
+
+            if self.webdriver_is_on_path:
+                self.driver = webdriver.Chrome(options=options)
+            else:
+                service = ChromeService(executable_path=driver_executable)
+                self.driver = webdriver.Chrome(service=service, options=options)
 
         self.driver.set_window_size(1200, 800)
         if self.role == 'host':
