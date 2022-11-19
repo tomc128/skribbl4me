@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter.font import Font
+from gui.skribbler_window import SkribblerWindow
 
 from gui.styles import *
 
@@ -15,7 +16,7 @@ class MainWindow(tk.Toplevel):
 
         self.protocol('WM_DELETE_WINDOW', self.master.destroy)
 
-        self.title('Welcome to Skribbl4Me')
+        self.title('skribbl4me : Main')
         self.resizable(False, False)
 
         self._create_widgets()
@@ -50,7 +51,7 @@ class MainWindow(tk.Toplevel):
         self.buttons = ttk.Frame(self.wrapper)
         
         self.init_driver_button = ttk.Button(self.buttons, text='Initialize Driver', command=self._on_init_driver_button_click)
-        self.start_skribbling_button = ttk.Button(self.buttons, text='Start Skribbling', state=tk.DISABLED)
+        self.launch_skribbler_button = ttk.Button(self.buttons, text='Launch Skribbler', state=tk.DISABLED, command=self._on_launch_skribbler_button_click)
 
 
     def _place_widgets(self):
@@ -59,7 +60,7 @@ class MainWindow(tk.Toplevel):
         self.buttons.grid(row=2, column=0,  **ELEMENT_PADDING, sticky=tk.NSEW)
         
         self.init_driver_button.grid(row=0, column=0, **ELEMENT_PADDING, sticky=tk.NSEW)
-        self.start_skribbling_button.grid(row=0, column=1, **ELEMENT_PADDING, sticky=tk.NSEW)
+        self.launch_skribbler_button.grid(row=0, column=1, **ELEMENT_PADDING, sticky=tk.NSEW)
 
         self.buttons.columnconfigure(0, weight=1)
         self.buttons.columnconfigure(1, weight=1)
@@ -76,14 +77,16 @@ class MainWindow(tk.Toplevel):
     
 
     def _on_init_driver_button_click(self):
-        if self.skribbler.driver_is_running and self.skribbler.website_is_loaded:
+        if self.skribbler.driver_is_initialised and self.skribbler.website_is_loaded:
             return
         
         self.skribbler.init_driver()
         self.skribbler.load_website()
 
-        self.start_skribbling_button['state'] = tk.NORMAL
+        self.launch_skribbler_button['state'] = tk.NORMAL
 
 
-    def _on_start_skribbling_button_click(self):
-        pass
+    def _on_launch_skribbler_button_click(self):
+        SkribblerWindow(self.skribbler, master=self.master)
+        self.destroy()
+

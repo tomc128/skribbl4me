@@ -12,3 +12,5 @@ if __name__ == '__main__':
     main_window = MainWindow(skribbler, app)
 
     app.mainloop()
+
+    skribbler.stop_skribbling()

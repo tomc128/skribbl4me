@@ -1,5 +1,7 @@
 """Contains the Skribbler class."""
 
+from threading import Thread
+from time import sleep
 from selenium import webdriver
 from selenium.common.exceptions import (NoSuchElementException, StaleElementReferenceException, ElementNotInteractableException, TimeoutException)
 from selenium.webdriver.common.by import By
@@ -17,14 +19,19 @@ class Skribbler:
     PAGE_LOAD_TIMEOUT = 10
     COOKIE_CONSENT_TIMEOUT = 3
 
+    LOOP_DELAY = 0.1
+
     
     def __init__(self, driver_executable: str, autodraw_extension: str, word_list: list[str]) -> None:
         """Initializes the Skribbler class."""
         self.word_list = word_list
-        self.driver_is_running = False
+        self.driver_is_initialised = False
         self.website_is_loaded = False
+        self.skribbling_is_enabled = False
         self.driver_executable = driver_executable
         self.autodraw_extension = autodraw_extension
+
+        self.loop_thread = Thread(target=self.loop)
 
 
     def init_driver(self) -> None:
@@ -43,7 +50,7 @@ class Skribbler:
             service = ChromeService(executable_path=self.driver_executable)
             self.driver = webdriver.Chrome(service=service, options=options)
         
-        self.driver_is_running = True
+        self.driver_is_initialised = True
             
 
     def load_website(self) -> None:
@@ -60,3 +67,23 @@ class Skribbler:
             pass
             
         self.website_is_loaded = True
+    
+
+    def start_skribbling(self) -> None:
+        """Starts the skribbling loop."""
+        self.skribbling_is_enabled = True
+        self.loop_thread.start()
+
+
+    def stop_skribbling(self) -> None:
+        """Stops the skribbling loop."""
+        if self.skribbling_is_enabled:
+            self.skribbling_is_enabled = False
+            self.loop_thread.join()
+
+
+    def loop(self) -> None:
+        """The main loop."""
+        while self.skribbling_is_enabled:
+            print('loop')
+            sleep(self.LOOP_DELAY)
