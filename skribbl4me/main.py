@@ -1,6 +1,7 @@
 import json
 from gui.app import App
 from gui.main_window import MainWindow
+from gui.skribbler_window import SkribblerWindow
 
 from skribbler import Skribbler
 
@@ -21,6 +22,7 @@ if __name__ == '__main__':
     app.withdraw()
 
     main_window = MainWindow(skribbler, app)
+    # skribbler_window = SkribblerWindow(skribbler, app) # testing only - no functionality
 
     app.mainloop()
 

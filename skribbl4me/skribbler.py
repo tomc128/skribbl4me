@@ -45,8 +45,9 @@ class Skribbler:
         self.skribbling_is_enabled = False
         self.driver_executable = driver_executable
         self.autodraw_extension = autodraw_extension
+        self.current_round_guessed_words = []
 
-        self.loop_thread = Thread(target=self.loop)
+        self.loop_thread: Thread
 
 
     def init_driver(self) -> None:
@@ -89,15 +90,22 @@ class Skribbler:
 
     def start_skribbling(self) -> None:
         """Starts the skribbling loop."""
+        if self.skribbling_is_enabled:
+            return
+
+        self.loop_thread = Thread(target=self.loop)
+
         self.skribbling_is_enabled = True
         self.loop_thread.start()
 
 
     def stop_skribbling(self) -> None:
         """Stops the skribbling loop."""
-        if self.skribbling_is_enabled:
-            self.skribbling_is_enabled = False
-            self.loop_thread.join()
+        if not self.skribbling_is_enabled:
+            return
+
+        self.skribbling_is_enabled = False
+        self.loop_thread.join()
 
 
     def loop(self) -> None:
@@ -136,6 +144,7 @@ class Skribbler:
                             previous_game_state = g_state
 
                             print(f'Game state: {g_state}')
+                            self.current_round_guessed_words = []
                         
                         case 'guessing':
                             # Do not break if previous state was guessing, as guessing requires multiple checks to be done
@@ -149,6 +158,7 @@ class Skribbler:
                             number_of_hints = self.get_number_of_hints_given(word_hint)
 
                             possible_words = self.get_possible_words(hint_regex)
+                            possible_words = list(set(possible_words) - set(self.current_round_guessed_words))
                             word_to_guess = self.choose_word_to_guess(possible_words)
 
                             if word_to_guess:
@@ -278,6 +288,7 @@ class Skribbler:
         try:
             guess_input.send_keys(word)
             guess_input.send_keys(Keys.RETURN)
+            self.current_round_guessed_words.append(word)
         except ElementNotInteractableException:
             pass
 
