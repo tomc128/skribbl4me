@@ -1,5 +1,7 @@
 """Contains the Skribbler class."""
 
+import random
+import re
 from threading import Thread
 from time import sleep
 from selenium import webdriver
@@ -12,6 +14,14 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.common.keys import Keys
+
+
+
+def clamp(value, min_value, max_value):
+    """Clamps a value to a min and max value."""
+    return max(min(value, max_value), min_value)
+
 
 class Skribbler:
     """Handles all website interactions and game state logic."""
@@ -103,57 +113,29 @@ class Skribbler:
             website_state = self.get_website_state()
 
             match website_state:
-                case 'home':
-                    if previous_website_state == 'home':
+                case w_state if w_state in ['home', 'lobby', 'loading']:
+                    if previous_website_state == w_state:
                         continue
-                    previous_website_state = 'home'
+                    previous_website_state = w_state
 
-                    print('On home screen. Waiting for game to start...')
-                
-                case 'lobby':
-                    if previous_website_state == 'lobby':
-                        continue
-                    previous_website_state = 'lobby'
-
-                    print('In lobby. Waiting for game to start...')
-                
-                case 'loading':
-                    if previous_website_state == 'loading':
-                        continue
-                    previous_website_state = 'loading'
-                    
-                    print('In loading screen...')
+                    print(f'Website state: {w_state}')
                 
                 case 'game':
                     # Do not break if previous state was game, as the game requires multiple checks to be done
                     if previous_website_state != 'game':
-                        print('In game.')
+                        print('Website state: game')
 
                     previous_website_state = 'game'
 
                     game_state = self.get_game_state()
                     
                     match game_state:
-                        case 'drawing':
-                            if previous_game_state == 'drawing':
+                        case g_state if g_state in ['drawing', 'waiting_for_round', 'guessed']:
+                            if previous_game_state == g_state:
                                 continue
-                            previous_game_state = 'drawing'
+                            previous_game_state = g_state
 
-                            print('Drawing!')
-                        
-                        case 'waiting_for_round':
-                            if previous_game_state == 'waiting_for_round':
-                                continue
-                            previous_game_state = 'waiting_for_round'
-
-                            print('Skribbler: Waiting for round / Waiting for the next round to start...')
-                        
-                        case 'guessed':
-                            if previous_game_state == 'guessed':
-                                continue
-                            previous_game_state = 'guessed'
-
-                            print('Skribbler: Guessed / Waiting for the next round...')
+                            print(f'Game state: {g_state}')
                         
                         case 'guessing':
                             # Do not break if previous state was guessing, as guessing requires multiple checks to be done
@@ -161,7 +143,26 @@ class Skribbler:
                                 print('Guessing!')
                             previous_game_state = 'guessing'
 
-                            print('Skribbler: Guessing / TODO: do something here...')
+                            word_hint = self.extract_word_hint()
+                            hint_regex = self.generate_hint_regex(word_hint)
+
+                            number_of_hints = self.get_number_of_hints_given(word_hint)
+
+                            word_to_guess = self.choose_word_to_guess(hint_regex)
+
+                            if word_to_guess:
+                                print(f'Guessing "{word_to_guess}"')
+                                self.make_guess(word_to_guess)
+
+                                # Wait a random amount of time before guessing again
+                                guess_delay = random.randint(*self.GUESS_DELAY_RANGES[clamp(number_of_hints, 0, len(self.GUESS_DELAY_RANGES) - 1)])
+                                print(f'Waiting {guess_delay} seconds before guessing again...')
+                                sleep(guess_delay)
+                            
+                            print('Done')
+
+
+
 
         print('Stopping skribbling loop...')
 
@@ -222,6 +223,8 @@ class Skribbler:
         except NoSuchElementException:
             pass
 
+
+        # TODO: Sometimes the app thinks we are guessing when in reality the round is over (but the overlay hasn't quite been hidden yet)
         return 'guessing'
 
 
@@ -239,11 +242,41 @@ class Skribbler:
         return word_hint.strip()
 
 
+    def get_number_of_hints_given(self, word_hint: str) -> int:
+        """Returns the number of hints given."""
+        # the number of hints is the number of letters in the word hint (not spaces or _)
+        return len([letter for letter in word_hint if letter != ' ' and letter != '_'])
+
+
     def generate_hint_regex(self, word_hint: str) -> str:
         """Generates a regex pattern from the word hint."""
         return '^' + ''.join(['\\w' if char == '_' else '\\W' if char == ' ' else char for char in word_hint]) + '$'
 
 
+    def choose_word_to_guess(self, hint_regex: str) -> str:
+        """Chooses a word to guess, using the hint regex."""
+        possible_words = [word for word in self.word_list if re.match(hint_regex, word)]
+
+        if not possible_words:
+            return ''
+        
+        return random.choice(possible_words)
+
+
+    def make_guess(self, word: str) -> None:
+        """Makes a guess."""
+        # #game > #game-wrapper #game-chat > .chat-container > form > input
+        guess_input = self.driver.find_element(By.ID, 'game-wrapper').find_element(By.ID, 'game-chat').find_element(By.CLASS_NAME, 'chat-container').find_element(By.TAG_NAME, 'form').find_element(By.TAG_NAME, 'input')
+
+        if guess_input.get_attribute('value'):
+            # user is typing, wait for them to finish
+            return
+        
+        try:
+            guess_input.send_keys(word)
+            guess_input.send_keys(Keys.RETURN)
+        except ElementNotInteractableException:
+            pass
 
 
 
