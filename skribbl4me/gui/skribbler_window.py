@@ -30,11 +30,17 @@ class SkribblerWindow(tk.Toplevel):
         self._create_wrapper()
 
         style = ttk.Style(self.wrapper)
-        style.configure('GameInfo.TFrame', background='red')
-        style.configure('PlayerInfo.TFrame', background='green')
-        style.configure('PossibleWords.TFrame', background='blue')
-        style.configure('Guesses.TFrame', background='yellow')
-        style.configure('Actions.TFrame', background='pink')
+        # For debugging:
+        # style.configure('GameInfo.TFrame', background='red')
+        # style.configure('PlayerInfo.TFrame', background='green')
+        # style.configure('PossibleWords.TFrame', background='blue')
+        # style.configure('Guesses.TFrame', background='yellow')
+        # style.configure('Actions.TFrame', background='pink')
+        style.configure('GameInfo.TFrame')
+        style.configure('PlayerInfo.TFrame')
+        style.configure('PossibleWords.TFrame')
+        style.configure('Guesses.TFrame')
+        style.configure('Actions.TFrame')
 
         style.configure('TLabel', font=LABEL_FONT)
 
@@ -107,18 +113,22 @@ class SkribblerWindow(tk.Toplevel):
         self.guesses_frame.grid(row=1, column=2, sticky=tk.NSEW, **ELEMENT_PADDING)
 
         self.guesses_frame.columnconfigure(0, weight=1)
+        
         self.guesses_frame.rowconfigure(0)
         self.guesses_frame.rowconfigure(1, weight=1)
         self.guesses_frame.rowconfigure(2)
 
         self.guesses_label = ttk.Label(self.guesses_frame, text='Guesses:')
-        self.guesses_label.grid(row=0, column=0, sticky=tk.NSEW, **ELEMENT_PADDING)
+        self.guesses_label.grid(row=0, column=0, columnspan=2, sticky=tk.NSEW, **ELEMENT_PADDING)
 
         self.guesses_text = ttk.Entry(self.guesses_frame, width=30, state='readonly')
-        self.guesses_text.grid(row=1, column=0, sticky=tk.NSEW, **ELEMENT_PADDING)
+        self.guesses_text.grid(row=1, column=0, columnspan=2, sticky=tk.NSEW, **ELEMENT_PADDING)
 
         self.guesses_entry = ttk.Entry(self.guesses_frame)
         self.guesses_entry.grid(row=2, column=0, sticky=tk.NSEW, **ELEMENT_PADDING)
+
+        self.guesses_guess_button = ttk.Button(self.guesses_frame, text='Guess', command=self._on_guesses_guess_button_click)
+        self.guesses_guess_button.grid(row=2, column=1, sticky=tk.NSEW, **ELEMENT_PADDING)
 
         self.guesses_entry.bind('<Return>', self._on_guesses_entry_return)
     
@@ -137,8 +147,13 @@ class SkribblerWindow(tk.Toplevel):
         self.stop_button.grid(row=0, column=1, sticky=tk.NSEW, **ELEMENT_PADDING)
 
 
-    def _on_guesses_entry_return(self, event):
+    def _on_guesses_entry_return(self, _):
         self.skribbler.make_guess(self.guesses_entry.get())
+        self.guesses_entry.delete(0, tk.END)
+    
+    def _on_guesses_guess_button_click(self):
+        self.skribbler.make_guess(self.guesses_entry.get())
+        self.guesses_entry.delete(0, tk.END)
 
     def _on_start_button_click(self):
         self.skribbler.start_skribbling()

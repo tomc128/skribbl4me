@@ -50,8 +50,7 @@ class MainWindow(tk.Toplevel):
     def _create_buttons(self):
         self.buttons = ttk.Frame(self.wrapper)
         
-        self.init_driver_button = ttk.Button(self.buttons, text='Initialize Driver', command=self._on_init_driver_button_click)
-        self.launch_skribbler_button = ttk.Button(self.buttons, text='Launch Skribbler', state=tk.DISABLED, command=self._on_launch_skribbler_button_click)
+        self.launch_button = ttk.Button(self.buttons, text='Initialise & Launch', command=self._on_button_click)
 
 
     def _place_widgets(self):
@@ -59,8 +58,7 @@ class MainWindow(tk.Toplevel):
         self.description.grid(row=1, column=0, **ELEMENT_PADDING, sticky=tk.NSEW)
         self.buttons.grid(row=2, column=0,  **ELEMENT_PADDING, sticky=tk.NSEW)
         
-        self.init_driver_button.grid(row=0, column=0, **ELEMENT_PADDING, sticky=tk.NSEW)
-        self.launch_skribbler_button.grid(row=0, column=1, **ELEMENT_PADDING, sticky=tk.NSEW)
+        self.launch_button.grid(row=0, column=0, sticky=tk.NSEW)
 
         self.buttons.columnconfigure(0, weight=1)
         self.buttons.columnconfigure(1, weight=1)
@@ -76,17 +74,12 @@ class MainWindow(tk.Toplevel):
         self.rowconfigure(0, weight=1)
     
 
-    def _on_init_driver_button_click(self):
-        if self.skribbler.driver_is_initialised and self.skribbler.website_is_loaded:
-            return
+    def _on_button_click(self):
+        if not self.skribbler.driver_is_initialised:
+            self.skribbler.init_driver()
         
-        self.skribbler.init_driver()
-        self.skribbler.load_website()
+        if not self.skribbler.website_is_loaded:
+            self.skribbler.load_website()
 
-        self.launch_skribbler_button['state'] = tk.NORMAL
-
-
-    def _on_launch_skribbler_button_click(self):
         SkribblerWindow(self.skribbler, master=self.master)
         self.destroy()
-
