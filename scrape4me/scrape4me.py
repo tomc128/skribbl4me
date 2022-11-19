@@ -74,6 +74,7 @@ class Scraper:
         if browser == 'edge':
             options = EdgeOptions()
             options.headless = headless
+            options.add_argument('--mute-audio')
 
             if self.webdriver_is_on_path:
                 self.driver = webdriver.Edge(options=options)
@@ -83,6 +84,7 @@ class Scraper:
         else:
             options = ChromeOptions()
             options.headless = headless
+            options.add_argument('--mute-audio')
 
             if self.webdriver_is_on_path:
                 self.driver = webdriver.Chrome(options=options)

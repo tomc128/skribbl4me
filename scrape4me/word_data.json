@@ -1,18 +1,18 @@
 {
-    "total_word_encounters": 9471,
-    "unique_words": 3421,
+    "total_word_encounters": 10816,
+    "unique_words": 3502,
     "words": [
         {
             "word": "ABBA",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "AC/DC",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "AFK",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "ATV",
@@ -20,7 +20,7 @@
         },
         {
             "word": "Abraham Lincoln",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "Adidas",
@@ -68,7 +68,7 @@
         },
         {
             "word": "Angry Birds",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "Antarctica",
@@ -84,7 +84,7 @@
         },
         {
             "word": "Arctic",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "Argentina",
@@ -101,6 +101,10 @@
         {
             "word": "Asterix",
             "frequency": 5
+        },
+        {
+            "word": "Athena",
+            "frequency": 1
         },
         {
             "word": "Athens",
@@ -124,7 +128,7 @@
         },
         {
             "word": "Austria",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "BLT",
@@ -133,6 +137,10 @@
         {
             "word": "BMW",
             "frequency": 6
+        },
+        {
+            "word": "BMX",
+            "frequency": 1
         },
         {
             "word": "Bahamas",
@@ -144,7 +152,7 @@
         },
         {
             "word": "Band-Aid",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "Barack Obama",
@@ -159,12 +167,16 @@
             "frequency": 3
         },
         {
+            "word": "Batman",
+            "frequency": 1
+        },
+        {
             "word": "Beethoven",
             "frequency": 2
         },
         {
             "word": "Beijing",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Berlin",
@@ -176,7 +188,7 @@
         },
         {
             "word": "Bible",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "Big Ben",
@@ -184,7 +196,7 @@
         },
         {
             "word": "Bigfoot",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "Bill Gates",
@@ -208,11 +220,11 @@
         },
         {
             "word": "Bowser",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "Brachiosaurus",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "Brad Pitt",
@@ -220,7 +232,7 @@
         },
         {
             "word": "Brazil",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Britain",
@@ -228,7 +240,7 @@
         },
         {
             "word": "Broadway",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "Bruce Lee",
@@ -244,7 +256,7 @@
         },
         {
             "word": "CPU",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "California",
@@ -256,7 +268,7 @@
         },
         {
             "word": "Capitalism",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "Capricorn",
@@ -264,7 +276,7 @@
         },
         {
             "word": "Captain America",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "Cat Woman",
@@ -272,7 +284,7 @@
         },
         {
             "word": "Catan",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "Cerberus",
@@ -300,7 +312,7 @@
         },
         {
             "word": "Chile",
-            "frequency": 2
+            "frequency": 5
         },
         {
             "word": "China",
@@ -312,7 +324,7 @@
         },
         {
             "word": "Christmas",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "Christmas Island",
@@ -324,10 +336,14 @@
         },
         {
             "word": "Chuck Norris",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "Civil War",
+            "frequency": 2
+        },
+        {
+            "word": "Clogs",
             "frequency": 1
         },
         {
@@ -336,11 +352,11 @@
         },
         {
             "word": "Colombia",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "Colosseum",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "Connect Four",
@@ -348,15 +364,19 @@
         },
         {
             "word": "Cookie Monster",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "Coronavirus",
             "frequency": 2
         },
         {
+            "word": "Crash Bandicoot",
+            "frequency": 1
+        },
+        {
             "word": "Creeper",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "Croatia",
@@ -368,7 +388,7 @@
         },
         {
             "word": "Cupid",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "DNA",
@@ -376,7 +396,11 @@
         },
         {
             "word": "Daffy Duck",
-            "frequency": 2
+            "frequency": 4
+        },
+        {
+            "word": "Danish",
+            "frequency": 1
         },
         {
             "word": "Darth Vader",
@@ -396,7 +420,7 @@
         },
         {
             "word": "Death Star",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Democrat",
@@ -412,7 +436,7 @@
         },
         {
             "word": "Discord",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "Doge",
@@ -436,11 +460,11 @@
         },
         {
             "word": "Doritos",
-            "frequency": 1
+            "frequency": 3
         },
         {
             "word": "Dory",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Dr. Seuss",
@@ -500,7 +524,7 @@
         },
         {
             "word": "Eminem",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "England",
@@ -528,11 +552,11 @@
         },
         {
             "word": "Fanta",
-            "frequency": 4
+            "frequency": 6
         },
         {
             "word": "Ferrari",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "Ferris wheel",
@@ -540,7 +564,7 @@
         },
         {
             "word": "Fifa",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "Finn",
@@ -548,7 +572,7 @@
         },
         {
             "word": "Finn and Jake",
-            "frequency": 4
+            "frequency": 6
         },
         {
             "word": "Firefox",
@@ -568,7 +592,7 @@
         },
         {
             "word": "France",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "Frankenstein",
@@ -584,7 +608,11 @@
         },
         {
             "word": "Frogger",
-            "frequency": 2
+            "frequency": 4
+        },
+        {
+            "word": "GTA",
+            "frequency": 1
         },
         {
             "word": "Game Boy",
@@ -620,7 +648,7 @@
         },
         {
             "word": "Goofy",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Google",
@@ -628,11 +656,11 @@
         },
         {
             "word": "Grand Canyon",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Great Barrier Reef",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "Great Lakes",
@@ -644,11 +672,11 @@
         },
         {
             "word": "Greece",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "Green Lantern",
-            "frequency": 1
+            "frequency": 3
         },
         {
             "word": "Greenland",
@@ -656,15 +684,15 @@
         },
         {
             "word": "Gru",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "Guitar Hero",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "Gulf of Mexico",
-            "frequency": 1
+            "frequency": 4
         },
         {
             "word": "Hades",
@@ -672,11 +700,11 @@
         },
         {
             "word": "Happy Meal",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Harry Potter",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "Hawaii",
@@ -708,7 +736,7 @@
         },
         {
             "word": "Honda",
-            "frequency": 7
+            "frequency": 8
         },
         {
             "word": "Hula Hoop",
@@ -716,7 +744,7 @@
         },
         {
             "word": "Hulk",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "Hungary",
@@ -732,7 +760,7 @@
         },
         {
             "word": "Ikea",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Illuminati",
@@ -744,14 +772,18 @@
         },
         {
             "word": "Intel",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "Iran",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Ireland",
+            "frequency": 2
+        },
+        {
+            "word": "Iron Giant",
             "frequency": 2
         },
         {
@@ -768,11 +800,11 @@
         },
         {
             "word": "Jack-o-lantern",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Jackie Chan",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "James Bond",
@@ -784,7 +816,7 @@
         },
         {
             "word": "Jaws",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "JayZ",
@@ -804,7 +836,7 @@
         },
         {
             "word": "Jesus Christ",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Jimmy Neutron",
@@ -816,7 +848,7 @@
         },
         {
             "word": "John Cena",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Johnny Bravo",
@@ -840,7 +872,7 @@
         },
         {
             "word": "Kim Jong-un",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "King Kong",
@@ -852,11 +884,11 @@
         },
         {
             "word": "Knuckles",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Kool-Aid",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Kung Fu",
@@ -872,7 +904,7 @@
         },
         {
             "word": "Las Vegas",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "Lasagna",
@@ -880,7 +912,7 @@
         },
         {
             "word": "LeBron James",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "Lego",
@@ -892,7 +924,7 @@
         },
         {
             "word": "Leonardo da Vinci",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Lightning McQueen",
@@ -904,19 +936,19 @@
         },
         {
             "word": "Lisa Simpson",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "Loch Ness",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "Loki",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "London",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Louvre",
@@ -951,6 +983,10 @@
             "frequency": 6
         },
         {
+            "word": "Marines",
+            "frequency": 2
+        },
+        {
             "word": "Mario",
             "frequency": 3
         },
@@ -964,7 +1000,7 @@
         },
         {
             "word": "Mars",
-            "frequency": 4
+            "frequency": 6
         },
         {
             "word": "McDonalds",
@@ -980,7 +1016,7 @@
         },
         {
             "word": "Mercury",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "Mexico",
@@ -1000,15 +1036,15 @@
         },
         {
             "word": "Mickey Mouse",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Microsoft",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "Milky Way",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Minecraft",
@@ -1040,7 +1076,7 @@
         },
         {
             "word": "Monday",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "Mont Blanc",
@@ -1076,7 +1112,7 @@
         },
         {
             "word": "Mount Rushmore",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "Mozart",
@@ -1088,11 +1124,11 @@
         },
         {
             "word": "Mr. Bean",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "Mr. Meeseeks",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "MrBeast",
@@ -1100,7 +1136,7 @@
         },
         {
             "word": "Mummy",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "NASCAR",
@@ -1116,11 +1152,11 @@
         },
         {
             "word": "Napoleon",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "Narnia",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "Nasa",
@@ -1152,11 +1188,11 @@
         },
         {
             "word": "New Year",
-            "frequency": 7
+            "frequency": 8
         },
         {
             "word": "New York",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "New Zealand",
@@ -1164,7 +1200,7 @@
         },
         {
             "word": "Nicolas Cage",
-            "frequency": 3
+            "frequency": 6
         },
         {
             "word": "Nike",
@@ -1172,15 +1208,15 @@
         },
         {
             "word": "Nintendo",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "Nintendo Switch",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "North America",
-            "frequency": 7
+            "frequency": 8
         },
         {
             "word": "North Korea",
@@ -1200,7 +1236,7 @@
         },
         {
             "word": "Norway",
-            "frequency": 6
+            "frequency": 7
         },
         {
             "word": "Notch",
@@ -1224,11 +1260,11 @@
         },
         {
             "word": "Olaf",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Olympics",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "Oreo",
@@ -1236,7 +1272,7 @@
         },
         {
             "word": "Overwatch",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "Pac-Man",
@@ -1264,11 +1300,11 @@
         },
         {
             "word": "Paypal",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Pegasus",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "Peppa Pig",
@@ -1288,7 +1324,7 @@
         },
         {
             "word": "Philippines",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "Phineas and Ferb",
@@ -1296,7 +1332,7 @@
         },
         {
             "word": "Photoshop",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "Picasso",
@@ -1304,11 +1340,11 @@
         },
         {
             "word": "Pikachu",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "Pink Panther",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "Pizza Hut",
@@ -1316,7 +1352,7 @@
         },
         {
             "word": "Playstation",
-            "frequency": 1
+            "frequency": 3
         },
         {
             "word": "Pluto",
@@ -1328,11 +1364,11 @@
         },
         {
             "word": "Poland",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Pompeii",
-            "frequency": 3
+            "frequency": 6
         },
         {
             "word": "Pong",
@@ -1360,7 +1396,7 @@
         },
         {
             "word": "Pringles",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "Pug",
@@ -1372,7 +1408,7 @@
         },
         {
             "word": "Puss in Boots",
-            "frequency": 7
+            "frequency": 9
         },
         {
             "word": "Queen Elizabeth",
@@ -1384,7 +1420,7 @@
         },
         {
             "word": "Red Sea",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Reddit",
@@ -1404,7 +1440,7 @@
         },
         {
             "word": "Rick",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Robbie Rotten",
@@ -1412,11 +1448,11 @@
         },
         {
             "word": "Robin Hood",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "Roblox",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Rocket League",
@@ -1432,7 +1468,7 @@
         },
         {
             "word": "Romania",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Rome",
@@ -1444,7 +1480,7 @@
         },
         {
             "word": "Rubiks Cube",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "Russia",
@@ -1452,7 +1488,7 @@
         },
         {
             "word": "SIM card",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "SUV",
@@ -1460,11 +1496,11 @@
         },
         {
             "word": "Samsung",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Sandy Cheeks",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Santa",
@@ -1492,7 +1528,7 @@
         },
         {
             "word": "Scrabble",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Segway",
@@ -1504,11 +1540,11 @@
         },
         {
             "word": "Serbia",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "Shaggy",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Shakespeare",
@@ -1532,11 +1568,11 @@
         },
         {
             "word": "Skittles",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "Skrillex",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Skype",
@@ -1544,7 +1580,7 @@
         },
         {
             "word": "Slinky",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "Slovakia",
@@ -1552,7 +1588,7 @@
         },
         {
             "word": "Snapchat",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "Snoop Dogg",
@@ -1564,7 +1600,7 @@
         },
         {
             "word": "Snow White",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "Socialism",
@@ -1608,7 +1644,7 @@
         },
         {
             "word": "Spain",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Spartacus",
@@ -1623,12 +1659,16 @@
             "frequency": 4
         },
         {
+            "word": "Spotify",
+            "frequency": 2
+        },
+        {
             "word": "Sprite",
             "frequency": 4
         },
         {
             "word": "Squidward",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "Sriracha",
@@ -1636,7 +1676,7 @@
         },
         {
             "word": "Stalin",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "Star Wars",
@@ -1656,7 +1696,7 @@
         },
         {
             "word": "Stegosaurus",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Stephen Hawking",
@@ -1668,7 +1708,7 @@
         },
         {
             "word": "Stitch",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Stone Age",
@@ -1684,7 +1724,7 @@
         },
         {
             "word": "Suez Canal",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "Superman",
@@ -1708,7 +1748,7 @@
         },
         {
             "word": "T-rex",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "T-shirt",
@@ -1720,11 +1760,11 @@
         },
         {
             "word": "Tails",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "Taj Mahal",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "Tarzan",
@@ -1732,11 +1772,15 @@
         },
         {
             "word": "Teletubby",
-            "frequency": 4
+            "frequency": 6
         },
         {
             "word": "Terminator",
-            "frequency": 3
+            "frequency": 4
+        },
+        {
+            "word": "Terraria",
+            "frequency": 1
         },
         {
             "word": "Tesla",
@@ -1759,8 +1803,12 @@
             "frequency": 5
         },
         {
+            "word": "The Avengers",
+            "frequency": 1
+        },
+        {
             "word": "The Beatles",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "The Rock",
@@ -1772,11 +1820,11 @@
         },
         {
             "word": "Tibet",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "TikTok",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "Titanic",
@@ -1804,7 +1852,7 @@
         },
         {
             "word": "Totoro",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "Tower Bridge",
@@ -1812,7 +1860,7 @@
         },
         {
             "word": "Tower of Pisa",
-            "frequency": 5
+            "frequency": 8
         },
         {
             "word": "Toyota",
@@ -1832,7 +1880,7 @@
         },
         {
             "word": "Twitch",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "Twitter",
@@ -1843,12 +1891,16 @@
             "frequency": 2
         },
         {
+            "word": "USA",
+            "frequency": 1
+        },
+        {
             "word": "USB",
             "frequency": 2
         },
         {
             "word": "Uganda",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "Ukraine",
@@ -1856,18 +1908,22 @@
         },
         {
             "word": "Uluru",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "United Kingdom",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "Uranus",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "Usain Bolt",
+            "frequency": 1
+        },
+        {
+            "word": "Van Gogh",
             "frequency": 1
         },
         {
@@ -1880,7 +1936,7 @@
         },
         {
             "word": "Velociraptor",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "Venice",
@@ -1888,7 +1944,7 @@
         },
         {
             "word": "Venus flytrap",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "Vietnam",
@@ -1904,7 +1960,7 @@
         },
         {
             "word": "Wales",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "Wall Street",
@@ -1924,7 +1980,7 @@
         },
         {
             "word": "WhatsApp",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "White House",
@@ -1932,7 +1988,7 @@
         },
         {
             "word": "William Shakespeare",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "William Wallace",
@@ -1940,7 +1996,7 @@
         },
         {
             "word": "Windows",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "Winnie the Pooh",
@@ -1984,7 +2040,7 @@
         },
         {
             "word": "Zeus",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "Zimbabwe",
@@ -1996,7 +2052,7 @@
         },
         {
             "word": "Zorro",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "Zuma",
@@ -2004,11 +2060,11 @@
         },
         {
             "word": "aardvark",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "abacus",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "abandoned",
@@ -2016,11 +2072,11 @@
         },
         {
             "word": "above",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "abs",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "abstract",
@@ -2036,7 +2092,7 @@
         },
         {
             "word": "accordion",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "ace",
@@ -2051,6 +2107,10 @@
             "frequency": 2
         },
         {
+            "word": "acorn",
+            "frequency": 1
+        },
+        {
             "word": "action",
             "frequency": 2
         },
@@ -2060,7 +2120,7 @@
         },
         {
             "word": "actress",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "addiction",
@@ -2088,7 +2148,7 @@
         },
         {
             "word": "afterlife",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "afternoon",
@@ -2104,19 +2164,19 @@
         },
         {
             "word": "air",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "air conditioner",
-            "frequency": 1
+            "frequency": 3
         },
         {
             "word": "air horn",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "airbag",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "aircraft",
@@ -2136,7 +2196,7 @@
         },
         {
             "word": "alarm",
-            "frequency": 6
+            "frequency": 7
         },
         {
             "word": "albatross",
@@ -2144,7 +2204,7 @@
         },
         {
             "word": "alchemist",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "alcohol",
@@ -2160,11 +2220,11 @@
         },
         {
             "word": "allergy",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "alley",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "almond",
@@ -2184,11 +2244,11 @@
         },
         {
             "word": "aluminum",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "amber",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "ambulance",
@@ -2196,7 +2256,7 @@
         },
         {
             "word": "ammo",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "amp",
@@ -2220,11 +2280,11 @@
         },
         {
             "word": "ancient",
-            "frequency": 1
+            "frequency": 3
         },
         {
             "word": "angel",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "anglerfish",
@@ -2232,7 +2292,7 @@
         },
         {
             "word": "angry",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "animation",
@@ -2240,11 +2300,11 @@
         },
         {
             "word": "anime",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "ankle",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "ant",
@@ -2260,7 +2320,7 @@
         },
         {
             "word": "antenna",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "anthill",
@@ -2268,7 +2328,7 @@
         },
         {
             "word": "antivirus",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "antlers",
@@ -2276,11 +2336,11 @@
         },
         {
             "word": "anvil",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "apartment",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "apocalypse",
@@ -2292,11 +2352,11 @@
         },
         {
             "word": "applause",
-            "frequency": 4
+            "frequency": 6
         },
         {
             "word": "apple pie",
-            "frequency": 1
+            "frequency": 3
         },
         {
             "word": "apple seed",
@@ -2311,8 +2371,12 @@
             "frequency": 3
         },
         {
+            "word": "aquarium",
+            "frequency": 1
+        },
+        {
             "word": "arch",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "archer",
@@ -2328,7 +2392,7 @@
         },
         {
             "word": "arm",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "armadillo",
@@ -2352,7 +2416,7 @@
         },
         {
             "word": "art",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "artery",
@@ -2368,7 +2432,7 @@
         },
         {
             "word": "ash",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "ashtray",
@@ -2376,11 +2440,11 @@
         },
         {
             "word": "assassin",
-            "frequency": 1
+            "frequency": 3
         },
         {
             "word": "assault",
-            "frequency": 7
+            "frequency": 8
         },
         {
             "word": "asterisk",
@@ -2420,7 +2484,7 @@
         },
         {
             "word": "audience",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "author",
@@ -2444,7 +2508,7 @@
         },
         {
             "word": "avocado",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "award",
@@ -2452,11 +2516,11 @@
         },
         {
             "word": "axe",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "baboon",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "baby",
@@ -2468,7 +2532,7 @@
         },
         {
             "word": "back",
-            "frequency": 6
+            "frequency": 7
         },
         {
             "word": "back pain",
@@ -2479,12 +2543,16 @@
             "frequency": 2
         },
         {
+            "word": "backbone",
+            "frequency": 2
+        },
+        {
             "word": "backflip",
             "frequency": 2
         },
         {
             "word": "background",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "backpack",
@@ -2516,7 +2584,7 @@
         },
         {
             "word": "bagpipes",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "baguette",
@@ -2524,27 +2592,27 @@
         },
         {
             "word": "bait",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "bakery",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "baking powder",
-            "frequency": 1
+            "frequency": 3
         },
         {
             "word": "baking sheet",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "baking soda",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "baklava",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "balance",
@@ -2556,7 +2624,7 @@
         },
         {
             "word": "bald",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "ball",
@@ -2575,8 +2643,20 @@
             "frequency": 2
         },
         {
+            "word": "bamboo",
+            "frequency": 1
+        },
+        {
+            "word": "banana",
+            "frequency": 1
+        },
+        {
             "word": "band",
             "frequency": 2
+        },
+        {
+            "word": "bandage",
+            "frequency": 1
         },
         {
             "word": "bandana",
@@ -2588,7 +2668,7 @@
         },
         {
             "word": "banker",
-            "frequency": 10
+            "frequency": 12
         },
         {
             "word": "bankrupt",
@@ -2596,11 +2676,11 @@
         },
         {
             "word": "banner",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "bar",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "barbarian",
@@ -2608,7 +2688,7 @@
         },
         {
             "word": "barbecue",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "barbed wire",
@@ -2624,7 +2704,7 @@
         },
         {
             "word": "bark",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "barn",
@@ -2632,7 +2712,7 @@
         },
         {
             "word": "barrel",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "barrier",
@@ -2640,7 +2720,7 @@
         },
         {
             "word": "bartender",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "base",
@@ -2648,19 +2728,19 @@
         },
         {
             "word": "baseball",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "baseball bat",
-            "frequency": 4
+            "frequency": 7
         },
         {
             "word": "basement",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "basil",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "basket",
@@ -2676,11 +2756,11 @@
         },
         {
             "word": "bath",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "bathrobe",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "bathroom",
@@ -2696,7 +2776,7 @@
         },
         {
             "word": "battle",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "battleship",
@@ -2704,11 +2784,15 @@
         },
         {
             "word": "bay",
-            "frequency": 8
+            "frequency": 10
         },
         {
             "word": "bayonet",
-            "frequency": 3
+            "frequency": 4
+        },
+        {
+            "word": "bazooka",
+            "frequency": 1
         },
         {
             "word": "beach",
@@ -2716,7 +2800,7 @@
         },
         {
             "word": "beak",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "bean",
@@ -2740,7 +2824,7 @@
         },
         {
             "word": "bear trap",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "beard",
@@ -2760,15 +2844,15 @@
         },
         {
             "word": "bed bug",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "bed sheet",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "bedroom",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "bedtime",
@@ -2776,7 +2860,7 @@
         },
         {
             "word": "bee",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "beef",
@@ -2820,7 +2904,7 @@
         },
         {
             "word": "below",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "belt",
@@ -2836,7 +2920,7 @@
         },
         {
             "word": "betray",
-            "frequency": 4
+            "frequency": 7
         },
         {
             "word": "biceps",
@@ -2844,7 +2928,7 @@
         },
         {
             "word": "bidet",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "bikini",
@@ -2876,7 +2960,7 @@
         },
         {
             "word": "birdcage",
-            "frequency": 6
+            "frequency": 7
         },
         {
             "word": "birdhouse",
@@ -2892,7 +2976,7 @@
         },
         {
             "word": "bison",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "bite",
@@ -2908,15 +2992,15 @@
         },
         {
             "word": "black belt",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "black hole",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "black pepper",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "blackberry",
@@ -2952,7 +3036,7 @@
         },
         {
             "word": "bling",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "blizzard",
@@ -2972,11 +3056,11 @@
         },
         {
             "word": "blouse",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "blow",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "blow up",
@@ -2996,7 +3080,7 @@
         },
         {
             "word": "blueberry",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "blueprint",
@@ -3020,7 +3104,7 @@
         },
         {
             "word": "boat",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "bobsled",
@@ -3036,7 +3120,7 @@
         },
         {
             "word": "boil",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "boiled egg",
@@ -3044,7 +3128,7 @@
         },
         {
             "word": "bomb",
-            "frequency": 4
+            "frequency": 6
         },
         {
             "word": "bone",
@@ -3052,7 +3136,7 @@
         },
         {
             "word": "bongo",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "bonnet",
@@ -3076,7 +3160,7 @@
         },
         {
             "word": "bookmark",
-            "frequency": 4
+            "frequency": 6
         },
         {
             "word": "bookshelf",
@@ -3084,7 +3168,7 @@
         },
         {
             "word": "boomerang",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "boots",
@@ -3104,11 +3188,11 @@
         },
         {
             "word": "bot",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "bottle",
-            "frequency": 7
+            "frequency": 8
         },
         {
             "word": "bottle flip",
@@ -3124,11 +3208,11 @@
         },
         {
             "word": "bounce",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "bouncer",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "bouquet",
@@ -3140,7 +3224,7 @@
         },
         {
             "word": "bow tie",
-            "frequency": 8
+            "frequency": 9
         },
         {
             "word": "bowl",
@@ -3148,7 +3232,7 @@
         },
         {
             "word": "bowling",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "bowling alley",
@@ -3159,20 +3243,24 @@
             "frequency": 3
         },
         {
-            "word": "boxer",
+            "word": "boxcar",
             "frequency": 1
         },
         {
-            "word": "boxing",
+            "word": "boxer",
             "frequency": 2
         },
         {
-            "word": "boy",
+            "word": "boxing",
             "frequency": 3
         },
         {
+            "word": "boy",
+            "frequency": 5
+        },
+        {
             "word": "boyfriend",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "bra",
@@ -3192,11 +3280,11 @@
         },
         {
             "word": "brain",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "brain freeze",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "brainstorm",
@@ -3208,7 +3296,7 @@
         },
         {
             "word": "brake",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "branch",
@@ -3216,15 +3304,15 @@
         },
         {
             "word": "brand",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "brawl",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "bread",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "break",
@@ -3263,12 +3351,20 @@
             "frequency": 1
         },
         {
+            "word": "broccoli",
+            "frequency": 1
+        },
+        {
+            "word": "broken",
+            "frequency": 1
+        },
+        {
             "word": "broken heart",
             "frequency": 2
         },
         {
             "word": "bronze",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "broom",
@@ -3280,7 +3376,7 @@
         },
         {
             "word": "brown",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "brownie",
@@ -3288,15 +3384,15 @@
         },
         {
             "word": "brunette",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "brush",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "bubble",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "bubble gum",
@@ -3332,7 +3428,7 @@
         },
         {
             "word": "bug spray",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "build",
@@ -3380,7 +3476,7 @@
         },
         {
             "word": "bun",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "bungee jumping",
@@ -3392,11 +3488,11 @@
         },
         {
             "word": "bunker",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "bunny",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "buoy",
@@ -3412,7 +3508,7 @@
         },
         {
             "word": "burrito",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "bus",
@@ -3432,7 +3528,7 @@
         },
         {
             "word": "bush",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "business card",
@@ -3440,7 +3536,7 @@
         },
         {
             "word": "butcher",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "butler",
@@ -3484,7 +3580,7 @@
         },
         {
             "word": "cafe",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "cage",
@@ -3508,11 +3604,11 @@
         },
         {
             "word": "call",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "camel",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "camera",
@@ -3564,7 +3660,7 @@
         },
         {
             "word": "candy cane",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "canister",
@@ -3584,7 +3680,7 @@
         },
         {
             "word": "canyon",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "cap",
@@ -3592,7 +3688,7 @@
         },
         {
             "word": "cape",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "cappuccino",
@@ -3604,7 +3700,7 @@
         },
         {
             "word": "captain",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "capture",
@@ -3616,7 +3712,7 @@
         },
         {
             "word": "car dealership",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "car wash",
@@ -3632,11 +3728,11 @@
         },
         {
             "word": "card",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "cardboard",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "cardinal",
@@ -3675,12 +3771,16 @@
             "frequency": 3
         },
         {
+            "word": "carrot cake",
+            "frequency": 1
+        },
+        {
             "word": "cart",
             "frequency": 3
         },
         {
             "word": "cartoon",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "case",
@@ -3692,11 +3792,11 @@
         },
         {
             "word": "cashew",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "cashier",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "casino",
@@ -3704,7 +3804,7 @@
         },
         {
             "word": "casserole",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "cassette",
@@ -3716,11 +3816,11 @@
         },
         {
             "word": "castanets",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "castle",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "casual",
@@ -3728,15 +3828,15 @@
         },
         {
             "word": "cat",
-            "frequency": 1
-        },
-        {
-            "word": "catalog",
             "frequency": 2
         },
         {
+            "word": "catalog",
+            "frequency": 3
+        },
+        {
             "word": "catapult",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "caterpillar",
@@ -3780,11 +3880,11 @@
         },
         {
             "word": "ceiling fan",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "celebrate",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "celebrity",
@@ -3816,7 +3916,7 @@
         },
         {
             "word": "centaur",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "center",
@@ -3824,7 +3924,7 @@
         },
         {
             "word": "centipede",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "cereal",
@@ -3840,7 +3940,7 @@
         },
         {
             "word": "chair",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "chalk",
@@ -3848,7 +3948,7 @@
         },
         {
             "word": "chalkboard",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "champagne",
@@ -3868,11 +3968,11 @@
         },
         {
             "word": "chapstick",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "charger",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "check",
@@ -3888,15 +3988,15 @@
         },
         {
             "word": "cheeks",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "cheerleader",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "cheers",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "cheese",
@@ -3908,7 +4008,7 @@
         },
         {
             "word": "cheeseburger",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "cheesecake",
@@ -3916,7 +4016,7 @@
         },
         {
             "word": "cheetah",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "chef",
@@ -3924,7 +4024,7 @@
         },
         {
             "word": "chemical",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "chemistry",
@@ -3932,15 +4032,15 @@
         },
         {
             "word": "cherry",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "cherry blossom",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "chess",
-            "frequency": 7
+            "frequency": 8
         },
         {
             "word": "chest",
@@ -3964,7 +4064,7 @@
         },
         {
             "word": "chewing gum",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "chicken",
@@ -4024,7 +4124,7 @@
         },
         {
             "word": "chocolate",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "chopsticks",
@@ -4040,11 +4140,11 @@
         },
         {
             "word": "church",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "cicada",
-            "frequency": 4
+            "frequency": 6
         },
         {
             "word": "cigar",
@@ -4056,15 +4156,15 @@
         },
         {
             "word": "cinema",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "cinnamon",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "cinnamon roll",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "circle",
@@ -4072,15 +4172,19 @@
         },
         {
             "word": "circuit",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "circus",
             "frequency": 1
         },
         {
+            "word": "city",
+            "frequency": 1
+        },
+        {
             "word": "clam",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "clamp",
@@ -4088,7 +4192,7 @@
         },
         {
             "word": "clap",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "clarinet",
@@ -4128,7 +4232,7 @@
         },
         {
             "word": "climber",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "climbing wall",
@@ -4136,7 +4240,7 @@
         },
         {
             "word": "clinic",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "clip",
@@ -4148,15 +4252,15 @@
         },
         {
             "word": "cloak",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "clock",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "close",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "closed",
@@ -4172,7 +4276,7 @@
         },
         {
             "word": "clothes",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "clothes hanger",
@@ -4204,19 +4308,19 @@
         },
         {
             "word": "club",
-            "frequency": 7
+            "frequency": 8
         },
         {
             "word": "coach",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "coal",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "coast",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "coast guard",
@@ -4224,7 +4328,7 @@
         },
         {
             "word": "coaster",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "coat",
@@ -4232,7 +4336,7 @@
         },
         {
             "word": "cobweb",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "cockroach",
@@ -4264,7 +4368,7 @@
         },
         {
             "word": "coffee",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "coffee shop",
@@ -4272,7 +4376,7 @@
         },
         {
             "word": "coffin",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "coin",
@@ -4280,7 +4384,7 @@
         },
         {
             "word": "cola",
-            "frequency": 1
+            "frequency": 3
         },
         {
             "word": "colander",
@@ -4288,7 +4392,7 @@
         },
         {
             "word": "cold",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "collapse",
@@ -4296,7 +4400,7 @@
         },
         {
             "word": "collar",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "collarbone",
@@ -4316,11 +4420,11 @@
         },
         {
             "word": "comb",
-            "frequency": 3
+            "frequency": 6
         },
         {
             "word": "combine harvester",
-            "frequency": 6
+            "frequency": 7
         },
         {
             "word": "comedian",
@@ -4332,7 +4436,7 @@
         },
         {
             "word": "comet",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "comfortable",
@@ -4364,11 +4468,11 @@
         },
         {
             "word": "complete",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "composer",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "computer",
@@ -4384,7 +4488,7 @@
         },
         {
             "word": "concrete",
-            "frequency": 3
+            "frequency": 6
         },
         {
             "word": "condiment",
@@ -4404,7 +4508,7 @@
         },
         {
             "word": "confused",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "console",
@@ -4420,11 +4524,11 @@
         },
         {
             "word": "construction",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "continent",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "contrabass",
@@ -4440,7 +4544,7 @@
         },
         {
             "word": "controller",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "converge",
@@ -4452,7 +4556,7 @@
         },
         {
             "word": "conveyor belt",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "cook",
@@ -4464,11 +4568,11 @@
         },
         {
             "word": "cookie dough",
-            "frequency": 1
+            "frequency": 4
         },
         {
             "word": "cookie jar",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "cookout",
@@ -4504,11 +4608,11 @@
         },
         {
             "word": "corn",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "corn dog",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "corn on the cob",
@@ -4524,7 +4628,7 @@
         },
         {
             "word": "corpse",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "corrida",
@@ -4544,7 +4648,7 @@
         },
         {
             "word": "countdown",
-            "frequency": 1
+            "frequency": 3
         },
         {
             "word": "country",
@@ -4552,7 +4656,7 @@
         },
         {
             "word": "countryside",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "couple",
@@ -4564,11 +4668,11 @@
         },
         {
             "word": "cousin",
-            "frequency": 6
+            "frequency": 7
         },
         {
             "word": "cover",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "cow",
@@ -4592,15 +4696,15 @@
         },
         {
             "word": "crab cake",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "crack",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "cracker",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "cranberry",
@@ -4620,7 +4724,11 @@
         },
         {
             "word": "crawl space",
-            "frequency": 2
+            "frequency": 3
+        },
+        {
+            "word": "crayfish",
+            "frequency": 1
         },
         {
             "word": "crazy",
@@ -4644,7 +4752,7 @@
         },
         {
             "word": "creep",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "crescent",
@@ -4652,7 +4760,7 @@
         },
         {
             "word": "cricket",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "crime",
@@ -4672,11 +4780,11 @@
         },
         {
             "word": "cross",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "crossbow",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "crosswalk",
@@ -4684,15 +4792,15 @@
         },
         {
             "word": "crow",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "crowbar",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "crowd",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "crown",
@@ -4744,11 +4852,11 @@
         },
         {
             "word": "cup",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "cupboard",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "cupcake",
@@ -4759,8 +4867,16 @@
             "frequency": 1
         },
         {
+            "word": "currency",
+            "frequency": 1
+        },
+        {
             "word": "curry",
             "frequency": 2
+        },
+        {
+            "word": "curtain",
+            "frequency": 1
         },
         {
             "word": "cushion",
@@ -4784,7 +4900,7 @@
         },
         {
             "word": "cyclist",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "cyclops",
@@ -4828,7 +4944,7 @@
         },
         {
             "word": "dandruff",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "dark",
@@ -4860,15 +4976,15 @@
         },
         {
             "word": "dead",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "deaf",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "death",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "debit card",
@@ -4912,7 +5028,7 @@
         },
         {
             "word": "demon",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "demonstration",
@@ -4920,11 +5036,11 @@
         },
         {
             "word": "den",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "dent",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "dentist",
@@ -4956,19 +5072,19 @@
         },
         {
             "word": "detective",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "detergent",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "detonate",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "devil",
-            "frequency": 4
+            "frequency": 6
         },
         {
             "word": "dew",
@@ -4976,15 +5092,15 @@
         },
         {
             "word": "diagonal",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "diagram",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "diamond",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "diaper",
@@ -5024,27 +5140,27 @@
         },
         {
             "word": "dinner",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "dip",
-            "frequency": 2
-        },
-        {
-            "word": "diploma",
-            "frequency": 1
-        },
-        {
-            "word": "direction",
             "frequency": 4
         },
         {
-            "word": "dirt",
+            "word": "diploma",
             "frequency": 2
         },
         {
+            "word": "direction",
+            "frequency": 5
+        },
+        {
+            "word": "dirt",
+            "frequency": 3
+        },
+        {
             "word": "dirty",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "disabled",
@@ -5052,11 +5168,11 @@
         },
         {
             "word": "disagree",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "disaster",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "disease",
@@ -5080,7 +5196,7 @@
         },
         {
             "word": "dishrag",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "dishwasher",
@@ -5096,7 +5212,7 @@
         },
         {
             "word": "distance",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "diva",
@@ -5112,11 +5228,11 @@
         },
         {
             "word": "division",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "divorce",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "dizzy",
@@ -5128,7 +5244,7 @@
         },
         {
             "word": "doctor",
-            "frequency": 4
+            "frequency": 6
         },
         {
             "word": "dog",
@@ -5136,7 +5252,7 @@
         },
         {
             "word": "dogfish",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "doghouse",
@@ -5164,11 +5280,11 @@
         },
         {
             "word": "dominoes",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "donkey",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "door",
@@ -5184,7 +5300,7 @@
         },
         {
             "word": "dots",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "double",
@@ -5196,7 +5312,7 @@
         },
         {
             "word": "dove",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "down",
@@ -5204,7 +5320,7 @@
         },
         {
             "word": "downstairs",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "drag",
@@ -5220,15 +5336,15 @@
         },
         {
             "word": "drain",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "drama",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "drawer",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "dream",
@@ -5236,7 +5352,7 @@
         },
         {
             "word": "dress",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "dressing",
@@ -5244,7 +5360,11 @@
         },
         {
             "word": "drift",
-            "frequency": 4
+            "frequency": 6
+        },
+        {
+            "word": "drill",
+            "frequency": 1
         },
         {
             "word": "drink",
@@ -5276,11 +5396,11 @@
         },
         {
             "word": "droplet",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "drought",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "drown",
@@ -5292,7 +5412,7 @@
         },
         {
             "word": "drum",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "drum kit",
@@ -5324,11 +5444,11 @@
         },
         {
             "word": "duel",
-            "frequency": 4
+            "frequency": 6
         },
         {
             "word": "dumb",
-            "frequency": 2
+            "frequency": 5
         },
         {
             "word": "dumbbell",
@@ -5364,7 +5484,7 @@
         },
         {
             "word": "dwarf",
-            "frequency": 5
+            "frequency": 7
         },
         {
             "word": "dynamite",
@@ -5372,11 +5492,11 @@
         },
         {
             "word": "eagle",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "ear",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "earbuds",
@@ -5388,7 +5508,7 @@
         },
         {
             "word": "earthquake",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "earwax",
@@ -5404,7 +5524,7 @@
         },
         {
             "word": "echidna",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "echo",
@@ -5412,7 +5532,7 @@
         },
         {
             "word": "eclair",
-            "frequency": 6
+            "frequency": 8
         },
         {
             "word": "eclipse",
@@ -5428,7 +5548,7 @@
         },
         {
             "word": "egg",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "egg hunt",
@@ -5436,7 +5556,7 @@
         },
         {
             "word": "eggplant",
-            "frequency": 5
+            "frequency": 7
         },
         {
             "word": "elbow",
@@ -5448,7 +5568,11 @@
         },
         {
             "word": "election",
-            "frequency": 4
+            "frequency": 6
+        },
+        {
+            "word": "electric car",
+            "frequency": 1
         },
         {
             "word": "electric guitar",
@@ -5468,7 +5592,7 @@
         },
         {
             "word": "elevator",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "elf",
@@ -5483,8 +5607,12 @@
             "frequency": 1
         },
         {
+            "word": "elliptical",
+            "frequency": 1
+        },
+        {
             "word": "email",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "embers",
@@ -5500,7 +5628,7 @@
         },
         {
             "word": "emoji",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "employer",
@@ -5512,11 +5640,11 @@
         },
         {
             "word": "emu",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "end",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "engine",
@@ -5552,7 +5680,7 @@
         },
         {
             "word": "escalator",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "espresso",
@@ -5564,7 +5692,7 @@
         },
         {
             "word": "evening",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "evolution",
@@ -5572,11 +5700,11 @@
         },
         {
             "word": "exam",
-            "frequency": 7
+            "frequency": 8
         },
         {
             "word": "excavator",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "excited",
@@ -5616,7 +5744,11 @@
         },
         {
             "word": "explorer",
-            "frequency": 3
+            "frequency": 4
+        },
+        {
+            "word": "explosion",
+            "frequency": 1
         },
         {
             "word": "extinct",
@@ -5640,7 +5772,7 @@
         },
         {
             "word": "eyelash",
-            "frequency": 6
+            "frequency": 7
         },
         {
             "word": "eyelid",
@@ -5652,7 +5784,7 @@
         },
         {
             "word": "eyeshadow",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "fabric",
@@ -5672,19 +5804,27 @@
         },
         {
             "word": "face paint",
-            "frequency": 4
+            "frequency": 5
+        },
+        {
+            "word": "factory",
+            "frequency": 2
         },
         {
             "word": "failure",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "fairy",
             "frequency": 3
         },
         {
+            "word": "fairy tale",
+            "frequency": 1
+        },
+        {
             "word": "fake teeth",
-            "frequency": 6
+            "frequency": 8
         },
         {
             "word": "falafel",
@@ -5708,11 +5848,11 @@
         },
         {
             "word": "fan",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "fanny pack",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "farm",
@@ -5728,11 +5868,11 @@
         },
         {
             "word": "fast",
-            "frequency": 5
+            "frequency": 8
         },
         {
             "word": "fast food",
-            "frequency": 1
+            "frequency": 3
         },
         {
             "word": "fast forward",
@@ -5744,7 +5884,7 @@
         },
         {
             "word": "father",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "faucet",
@@ -5752,7 +5892,7 @@
         },
         {
             "word": "fax machine",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "feather",
@@ -5760,7 +5900,7 @@
         },
         {
             "word": "fedora",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "fence",
@@ -5780,7 +5920,7 @@
         },
         {
             "word": "ferry",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "fertilizer",
@@ -5792,7 +5932,7 @@
         },
         {
             "word": "fettuccine",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "fever",
@@ -5800,7 +5940,7 @@
         },
         {
             "word": "fidget spinner",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "field",
@@ -5820,7 +5960,7 @@
         },
         {
             "word": "filmmaker",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "finger",
@@ -5836,19 +5976,19 @@
         },
         {
             "word": "fire",
-            "frequency": 1
+            "frequency": 3
         },
         {
             "word": "fire alarm",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "fire extinguisher",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "fire hose",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "fire hydrant",
@@ -5856,7 +5996,7 @@
         },
         {
             "word": "fire truck",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "fireball",
@@ -5876,7 +6016,7 @@
         },
         {
             "word": "firehouse",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "fireproof",
@@ -5892,7 +6032,7 @@
         },
         {
             "word": "fish",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "fish and chips",
@@ -5900,7 +6040,7 @@
         },
         {
             "word": "fish bowl",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "fisherman",
@@ -5912,7 +6052,7 @@
         },
         {
             "word": "fishing rod",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "fist",
@@ -5936,7 +6076,7 @@
         },
         {
             "word": "flagpole",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "flamethrower",
@@ -5948,7 +6088,11 @@
         },
         {
             "word": "flashlight",
-            "frequency": 4
+            "frequency": 6
+        },
+        {
+            "word": "flask",
+            "frequency": 1
         },
         {
             "word": "flat",
@@ -5956,7 +6100,7 @@
         },
         {
             "word": "flea",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "flicker",
@@ -5964,7 +6108,7 @@
         },
         {
             "word": "flight",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "flight attendant",
@@ -5972,7 +6116,7 @@
         },
         {
             "word": "float",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "flood",
@@ -5988,7 +6132,7 @@
         },
         {
             "word": "flop",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "floppy disk",
@@ -6024,15 +6168,15 @@
         },
         {
             "word": "flush",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "flute",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "fly",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "fly swatter",
@@ -6052,7 +6196,7 @@
         },
         {
             "word": "foil",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "fold",
@@ -6076,11 +6220,11 @@
         },
         {
             "word": "footrest",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "force",
-            "frequency": 1
+            "frequency": 5
         },
         {
             "word": "force field",
@@ -6088,11 +6232,15 @@
         },
         {
             "word": "forearm",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "forehead",
             "frequency": 5
+        },
+        {
+            "word": "forest",
+            "frequency": 1
         },
         {
             "word": "forest fire",
@@ -6112,11 +6260,11 @@
         },
         {
             "word": "fortress",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "fortune",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "fossil",
@@ -6128,7 +6276,7 @@
         },
         {
             "word": "fountain",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "fox",
@@ -6136,15 +6284,15 @@
         },
         {
             "word": "frame",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "freckles",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "freezer",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "fresh",
@@ -6168,7 +6316,7 @@
         },
         {
             "word": "friendship bracelet",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "fries",
@@ -6185,6 +6333,10 @@
         {
             "word": "frostbite",
             "frequency": 2
+        },
+        {
+            "word": "frosting",
+            "frequency": 1
         },
         {
             "word": "frown",
@@ -6216,11 +6368,11 @@
         },
         {
             "word": "funeral",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "fungus",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "funny",
@@ -6236,11 +6388,11 @@
         },
         {
             "word": "furnace",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "furniture",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "furry",
@@ -6284,11 +6436,11 @@
         },
         {
             "word": "garbage",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "garbage truck",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "garden",
@@ -6296,7 +6448,7 @@
         },
         {
             "word": "gardener",
-            "frequency": 1
+            "frequency": 5
         },
         {
             "word": "garlic",
@@ -6327,8 +6479,12 @@
             "frequency": 2
         },
         {
-            "word": "gem",
+            "word": "gate",
             "frequency": 1
+        },
+        {
+            "word": "gem",
+            "frequency": 3
         },
         {
             "word": "gender",
@@ -6340,7 +6496,7 @@
         },
         {
             "word": "genie",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "genius",
@@ -6364,7 +6520,7 @@
         },
         {
             "word": "geyser",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "ghost",
@@ -6376,11 +6532,11 @@
         },
         {
             "word": "giant",
-            "frequency": 5
+            "frequency": 8
         },
         {
             "word": "gift",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "ginger",
@@ -6392,7 +6548,7 @@
         },
         {
             "word": "giraffe",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "girl",
@@ -6420,11 +6576,11 @@
         },
         {
             "word": "glass",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "glasses",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "glider",
@@ -6444,7 +6600,7 @@
         },
         {
             "word": "gloss",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "glove",
@@ -6460,7 +6616,7 @@
         },
         {
             "word": "glue",
-            "frequency": 4
+            "frequency": 6
         },
         {
             "word": "gnome",
@@ -6476,11 +6632,11 @@
         },
         {
             "word": "goat",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "goatee",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "goblin",
@@ -6496,7 +6652,7 @@
         },
         {
             "word": "gold",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "gold chain",
@@ -6512,7 +6668,7 @@
         },
         {
             "word": "goldfish",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "golem",
@@ -6524,15 +6680,15 @@
         },
         {
             "word": "golf cart",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "golf club",
-            "frequency": 1
+            "frequency": 4
         },
         {
             "word": "gondola",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "gong",
@@ -6540,11 +6696,11 @@
         },
         {
             "word": "good",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "gopher",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "gorilla",
@@ -6560,7 +6716,7 @@
         },
         {
             "word": "graffiti",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "grain",
@@ -6568,7 +6724,7 @@
         },
         {
             "word": "gramophone",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "grandfather",
@@ -6580,19 +6736,27 @@
         },
         {
             "word": "grapefruit",
-            "frequency": 4
-        },
-        {
-            "word": "grapes",
             "frequency": 5
         },
         {
+            "word": "grapes",
+            "frequency": 6
+        },
+        {
+            "word": "graph",
+            "frequency": 1
+        },
+        {
+            "word": "graphics card",
+            "frequency": 1
+        },
+        {
             "word": "graphite",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "grass",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "grasshopper",
@@ -6600,7 +6764,7 @@
         },
         {
             "word": "grave",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "gravedigger",
@@ -6608,11 +6772,11 @@
         },
         {
             "word": "gravel",
-            "frequency": 1
+            "frequency": 3
         },
         {
             "word": "graveyard",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "gravity",
@@ -6628,7 +6792,7 @@
         },
         {
             "word": "greed",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "green",
@@ -6636,7 +6800,11 @@
         },
         {
             "word": "green beans",
-            "frequency": 6
+            "frequency": 7
+        },
+        {
+            "word": "greenhouse",
+            "frequency": 1
         },
         {
             "word": "grenade",
@@ -6660,11 +6828,11 @@
         },
         {
             "word": "grin",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "grits",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "groan",
@@ -6700,7 +6868,7 @@
         },
         {
             "word": "guillotine",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "guinea pig",
@@ -6712,15 +6880,15 @@
         },
         {
             "word": "guitar",
-            "frequency": 1
-        },
-        {
-            "word": "gum",
             "frequency": 2
         },
         {
-            "word": "gumball",
+            "word": "gum",
             "frequency": 3
+        },
+        {
+            "word": "gumball",
+            "frequency": 4
         },
         {
             "word": "gummy",
@@ -6740,7 +6908,7 @@
         },
         {
             "word": "gunpowder",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "gutter",
@@ -6756,11 +6924,11 @@
         },
         {
             "word": "habanero",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "hacker",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "hair",
@@ -6788,7 +6956,7 @@
         },
         {
             "word": "haircut",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "hairdresser",
@@ -6800,7 +6968,7 @@
         },
         {
             "word": "hairy",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "half",
@@ -6820,7 +6988,7 @@
         },
         {
             "word": "hamburger",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "hammer",
@@ -6852,7 +7020,7 @@
         },
         {
             "word": "handshake",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "handstand",
@@ -6875,12 +7043,16 @@
             "frequency": 4
         },
         {
+            "word": "hard",
+            "frequency": 1
+        },
+        {
             "word": "harmonica",
             "frequency": 1
         },
         {
             "word": "harp",
-            "frequency": 3
+            "frequency": 6
         },
         {
             "word": "harpoon",
@@ -6892,7 +7064,7 @@
         },
         {
             "word": "hashtag",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "hat",
@@ -6908,7 +7080,7 @@
         },
         {
             "word": "haunted house",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "hay bale",
@@ -6924,7 +7096,7 @@
         },
         {
             "word": "head",
-            "frequency": 5
+            "frequency": 7
         },
         {
             "word": "headache",
@@ -6960,7 +7132,7 @@
         },
         {
             "word": "hearse",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "heart",
@@ -7012,7 +7184,7 @@
         },
         {
             "word": "helmet",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "hen",
@@ -7024,7 +7196,7 @@
         },
         {
             "word": "herd",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "hermit",
@@ -7056,7 +7228,7 @@
         },
         {
             "word": "high score",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "highlighter",
@@ -7076,7 +7248,7 @@
         },
         {
             "word": "hilarious",
-            "frequency": 4
+            "frequency": 6
         },
         {
             "word": "hill",
@@ -7092,7 +7264,7 @@
         },
         {
             "word": "hipster",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "hit",
@@ -7100,7 +7272,7 @@
         },
         {
             "word": "hitchhiker",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "hive",
@@ -7108,7 +7280,7 @@
         },
         {
             "word": "hobbit",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "hockey",
@@ -7116,11 +7288,11 @@
         },
         {
             "word": "hockey stick",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "hoe",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "hold",
@@ -7136,7 +7308,7 @@
         },
         {
             "word": "homeless",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "honey",
@@ -7152,11 +7324,11 @@
         },
         {
             "word": "hood",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "hoodie",
-            "frequency": 5
+            "frequency": 7
         },
         {
             "word": "hook",
@@ -7184,7 +7356,7 @@
         },
         {
             "word": "horseshoe",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "horsewhip",
@@ -7208,7 +7380,7 @@
         },
         {
             "word": "hot chocolate",
-            "frequency": 4
+            "frequency": 6
         },
         {
             "word": "hot dog",
@@ -7227,8 +7399,12 @@
             "frequency": 1
         },
         {
-            "word": "house",
+            "word": "hourglass",
             "frequency": 1
+        },
+        {
+            "word": "house",
+            "frequency": 2
         },
         {
             "word": "hovercraft",
@@ -7244,7 +7420,7 @@
         },
         {
             "word": "hummingbird",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "hunger",
@@ -7268,7 +7444,7 @@
         },
         {
             "word": "hut",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "hyena",
@@ -7276,7 +7452,7 @@
         },
         {
             "word": "hypnotize",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "iPad",
@@ -7288,15 +7464,15 @@
         },
         {
             "word": "ice cream",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "ice cream shop",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "ice cream truck",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "ice fishing",
@@ -7308,7 +7484,7 @@
         },
         {
             "word": "icicle",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "idea",
@@ -7320,11 +7496,11 @@
         },
         {
             "word": "ignite",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "iguana",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "imagination",
@@ -7332,11 +7508,11 @@
         },
         {
             "word": "imp",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "impale",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "impostor",
@@ -7344,7 +7520,7 @@
         },
         {
             "word": "incognito",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "industry",
@@ -7352,7 +7528,7 @@
         },
         {
             "word": "infinite",
-            "frequency": 5
+            "frequency": 7
         },
         {
             "word": "injection",
@@ -7360,11 +7536,11 @@
         },
         {
             "word": "injury",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "ink",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "insane",
@@ -7380,7 +7556,7 @@
         },
         {
             "word": "insomnia",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "insulation",
@@ -7392,11 +7568,11 @@
         },
         {
             "word": "internet",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "intersection",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "interview",
@@ -7408,7 +7584,7 @@
         },
         {
             "word": "invasion",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "invincible",
@@ -7428,7 +7604,7 @@
         },
         {
             "word": "itch",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "ivy",
@@ -7436,7 +7612,7 @@
         },
         {
             "word": "jacket",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "jackhammer",
@@ -7456,7 +7632,7 @@
         },
         {
             "word": "jam",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "jar",
@@ -7464,7 +7640,7 @@
         },
         {
             "word": "jaw",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "jealous",
@@ -7476,7 +7652,7 @@
         },
         {
             "word": "jeep",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "jello",
@@ -7492,7 +7668,7 @@
         },
         {
             "word": "jersey",
-            "frequency": 10
+            "frequency": 11
         },
         {
             "word": "jester",
@@ -7512,7 +7688,7 @@
         },
         {
             "word": "joker",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "journey",
@@ -7528,7 +7704,7 @@
         },
         {
             "word": "jug",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "juggle",
@@ -7552,11 +7728,15 @@
         },
         {
             "word": "jungle",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "kangaroo",
             "frequency": 3
+        },
+        {
+            "word": "karaoke",
+            "frequency": 2
         },
         {
             "word": "katana",
@@ -7564,7 +7744,7 @@
         },
         {
             "word": "kayak",
-            "frequency": 6
+            "frequency": 7
         },
         {
             "word": "kazoo",
@@ -7576,7 +7756,7 @@
         },
         {
             "word": "keg",
-            "frequency": 5
+            "frequency": 7
         },
         {
             "word": "kendama",
@@ -7600,11 +7780,11 @@
         },
         {
             "word": "kick",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "kidney",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "kill",
@@ -7612,11 +7792,11 @@
         },
         {
             "word": "kilt",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "kindergarten",
-            "frequency": 1
+            "frequency": 3
         },
         {
             "word": "king",
@@ -7624,7 +7804,7 @@
         },
         {
             "word": "kingdom",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "kiss",
@@ -7632,7 +7812,7 @@
         },
         {
             "word": "kitchen",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "kitten",
@@ -7648,7 +7828,7 @@
         },
         {
             "word": "knife",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "knight",
@@ -7660,7 +7840,7 @@
         },
         {
             "word": "knuckle",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "koala",
@@ -7675,8 +7855,12 @@
             "frequency": 3
         },
         {
+            "word": "kraken",
+            "frequency": 1
+        },
+        {
             "word": "label",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "laboratory",
@@ -7684,7 +7868,7 @@
         },
         {
             "word": "lacrosse",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "ladder",
@@ -7692,11 +7876,11 @@
         },
         {
             "word": "ladle",
-            "frequency": 1
+            "frequency": 3
         },
         {
             "word": "lady",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "ladybug",
@@ -7736,7 +7920,7 @@
         },
         {
             "word": "lantern",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "lap",
@@ -7744,7 +7928,7 @@
         },
         {
             "word": "laptop",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "laser",
@@ -7752,7 +7936,7 @@
         },
         {
             "word": "laser pointer",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "lasso",
@@ -7760,7 +7944,7 @@
         },
         {
             "word": "laugh",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "laundry",
@@ -7784,7 +7968,7 @@
         },
         {
             "word": "lawyer",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "lead",
@@ -7796,15 +7980,19 @@
         },
         {
             "word": "leaf blower",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "leak",
             "frequency": 1
         },
         {
-            "word": "leather",
+            "word": "leash",
             "frequency": 2
+        },
+        {
+            "word": "leather",
+            "frequency": 3
         },
         {
             "word": "leave",
@@ -7816,7 +8004,7 @@
         },
         {
             "word": "leek",
-            "frequency": 5
+            "frequency": 7
         },
         {
             "word": "left",
@@ -7824,7 +8012,7 @@
         },
         {
             "word": "leggings",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "legs",
@@ -7832,11 +8020,11 @@
         },
         {
             "word": "lemon",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "lemonade",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "lemur",
@@ -7856,7 +8044,7 @@
         },
         {
             "word": "lettuce",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "level",
@@ -7876,11 +8064,11 @@
         },
         {
             "word": "library",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "license",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "licorice",
@@ -7908,7 +8096,7 @@
         },
         {
             "word": "lighthouse",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "lightning",
@@ -7916,11 +8104,15 @@
         },
         {
             "word": "lightsaber",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "lily",
             "frequency": 2
+        },
+        {
+            "word": "lilypad",
+            "frequency": 1
         },
         {
             "word": "limbo",
@@ -7964,7 +8156,7 @@
         },
         {
             "word": "litter box",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "liver",
@@ -7999,12 +8191,16 @@
             "frequency": 1
         },
         {
+            "word": "lock",
+            "frequency": 1
+        },
+        {
             "word": "locker",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "log",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "log flume",
@@ -8016,11 +8212,11 @@
         },
         {
             "word": "lollipop",
-            "frequency": 6
+            "frequency": 7
         },
         {
             "word": "long coat",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "look",
@@ -8051,6 +8247,10 @@
             "frequency": 2
         },
         {
+            "word": "lottery",
+            "frequency": 1
+        },
+        {
             "word": "loud",
             "frequency": 4
         },
@@ -8064,7 +8264,7 @@
         },
         {
             "word": "low",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "luck",
@@ -8080,7 +8280,7 @@
         },
         {
             "word": "lumberjack",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "lunch",
@@ -8124,7 +8324,7 @@
         },
         {
             "word": "machine gun",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "macho",
@@ -8132,11 +8332,15 @@
         },
         {
             "word": "magazine",
+            "frequency": 2
+        },
+        {
+            "word": "magic",
             "frequency": 1
         },
         {
             "word": "magic trick",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "magic wand",
@@ -8144,11 +8348,15 @@
         },
         {
             "word": "magician",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "magma",
             "frequency": 6
+        },
+        {
+            "word": "magnet",
+            "frequency": 1
         },
         {
             "word": "magnifier",
@@ -8156,7 +8364,7 @@
         },
         {
             "word": "maid",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "mail",
@@ -8180,7 +8388,7 @@
         },
         {
             "word": "mall",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "mallet",
@@ -8196,11 +8404,11 @@
         },
         {
             "word": "manatee",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "mango",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "manhole",
@@ -8208,7 +8416,7 @@
         },
         {
             "word": "manicure",
-            "frequency": 2
+            "frequency": 5
         },
         {
             "word": "mannequin",
@@ -8216,15 +8424,15 @@
         },
         {
             "word": "mansion",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "mantis",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "manure",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "many",
@@ -8240,7 +8448,7 @@
         },
         {
             "word": "maracas",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "marathon",
@@ -8248,7 +8456,7 @@
         },
         {
             "word": "marble",
-            "frequency": 6
+            "frequency": 7
         },
         {
             "word": "march",
@@ -8284,7 +8492,7 @@
         },
         {
             "word": "marshmallow",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "mascara",
@@ -8316,15 +8524,15 @@
         },
         {
             "word": "math",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "mathematics",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "mattress",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "mayor",
@@ -8336,11 +8544,11 @@
         },
         {
             "word": "meadow",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "mean",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "measure",
@@ -8352,7 +8560,7 @@
         },
         {
             "word": "meatball",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "meatloaf",
@@ -8404,7 +8612,7 @@
         },
         {
             "word": "menu",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "merch",
@@ -8424,7 +8632,7 @@
         },
         {
             "word": "messy",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "metal",
@@ -8432,7 +8640,7 @@
         },
         {
             "word": "meteor",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "meteorite",
@@ -8444,11 +8652,11 @@
         },
         {
             "word": "microphone",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "microscope",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "microwave",
@@ -8476,7 +8684,7 @@
         },
         {
             "word": "milkshake",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "millipede",
@@ -8484,11 +8692,11 @@
         },
         {
             "word": "mime",
-            "frequency": 6
+            "frequency": 7
         },
         {
             "word": "miner",
-            "frequency": 4
+            "frequency": 6
         },
         {
             "word": "minigolf",
@@ -8516,7 +8724,7 @@
         },
         {
             "word": "mirror",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "missile",
@@ -8540,7 +8748,7 @@
         },
         {
             "word": "mohawk",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "mold",
@@ -8556,11 +8764,15 @@
         },
         {
             "word": "monk",
-            "frequency": 6
+            "frequency": 7
         },
         {
             "word": "monkey",
             "frequency": 3
+        },
+        {
+            "word": "monkey bars",
+            "frequency": 1
         },
         {
             "word": "monocle",
@@ -8572,7 +8784,7 @@
         },
         {
             "word": "moon",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "moon bounce",
@@ -8580,7 +8792,7 @@
         },
         {
             "word": "moose",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "mop",
@@ -8596,7 +8808,7 @@
         },
         {
             "word": "moss",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "moth",
@@ -8616,7 +8828,7 @@
         },
         {
             "word": "motorcycle",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "mountain",
@@ -8632,7 +8844,7 @@
         },
         {
             "word": "mousepad",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "mousetrap",
@@ -8652,19 +8864,23 @@
         },
         {
             "word": "mozzarella",
+            "frequency": 2
+        },
+        {
+            "word": "mud",
             "frequency": 1
         },
         {
             "word": "muddy",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "muffin",
-            "frequency": 6
+            "frequency": 7
         },
         {
             "word": "mug",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "mugshot",
@@ -8680,10 +8896,14 @@
         },
         {
             "word": "muscle",
-            "frequency": 1
+            "frequency": 3
         },
         {
             "word": "museum",
+            "frequency": 1
+        },
+        {
+            "word": "mushroom",
             "frequency": 1
         },
         {
@@ -8692,11 +8912,11 @@
         },
         {
             "word": "music box",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "music notes",
-            "frequency": 1
+            "frequency": 3
         },
         {
             "word": "musket",
@@ -8704,7 +8924,7 @@
         },
         {
             "word": "mustache",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "mustard",
@@ -8712,7 +8932,7 @@
         },
         {
             "word": "nachos",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "nail",
@@ -8729,6 +8949,10 @@
         {
             "word": "napkin",
             "frequency": 4
+        },
+        {
+            "word": "narwhal",
+            "frequency": 2
         },
         {
             "word": "nature",
@@ -8752,7 +8976,7 @@
         },
         {
             "word": "negative",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "neighbor",
@@ -8796,7 +9020,7 @@
         },
         {
             "word": "nickel",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "night",
@@ -8813,6 +9037,10 @@
         {
             "word": "nightmare",
             "frequency": 4
+        },
+        {
+            "word": "ninja",
+            "frequency": 1
         },
         {
             "word": "nitrogen",
@@ -8844,11 +9072,11 @@
         },
         {
             "word": "nose hair",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "nose ring",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "nosebleed",
@@ -8856,7 +9084,7 @@
         },
         {
             "word": "nostrils",
-            "frequency": 1
+            "frequency": 4
         },
         {
             "word": "note",
@@ -8868,7 +9096,7 @@
         },
         {
             "word": "notepad",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "nothing",
@@ -8884,11 +9112,11 @@
         },
         {
             "word": "nuclear",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "nugget",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "nuke",
@@ -8908,7 +9136,7 @@
         },
         {
             "word": "nut",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "nutcracker",
@@ -8964,7 +9192,7 @@
         },
         {
             "word": "office",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "offline",
@@ -8980,7 +9208,7 @@
         },
         {
             "word": "old",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "olive",
@@ -8988,7 +9216,7 @@
         },
         {
             "word": "omelet",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "onion",
@@ -8996,7 +9224,11 @@
         },
         {
             "word": "onion powder",
-            "frequency": 6
+            "frequency": 7
+        },
+        {
+            "word": "online",
+            "frequency": 1
         },
         {
             "word": "open",
@@ -9008,7 +9240,7 @@
         },
         {
             "word": "orange",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "orangutan",
@@ -9024,7 +9256,7 @@
         },
         {
             "word": "orchard",
-            "frequency": 6
+            "frequency": 7
         },
         {
             "word": "orchestra",
@@ -9036,7 +9268,7 @@
         },
         {
             "word": "organ",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "origami",
@@ -9056,7 +9288,7 @@
         },
         {
             "word": "outer space",
-            "frequency": 1
+            "frequency": 3
         },
         {
             "word": "outlaw",
@@ -9072,7 +9304,7 @@
         },
         {
             "word": "oval",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "oven",
@@ -9084,7 +9316,7 @@
         },
         {
             "word": "overalls",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "overpass",
@@ -9104,11 +9336,11 @@
         },
         {
             "word": "ozone",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "pacifier",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "package",
@@ -9120,11 +9352,11 @@
         },
         {
             "word": "paddle",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "page",
-            "frequency": 7
+            "frequency": 9
         },
         {
             "word": "pain",
@@ -9140,7 +9372,11 @@
         },
         {
             "word": "paintball",
-            "frequency": 2
+            "frequency": 3
+        },
+        {
+            "word": "painting",
+            "frequency": 1
         },
         {
             "word": "pair",
@@ -9148,7 +9384,7 @@
         },
         {
             "word": "pajamas",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "palace",
@@ -9156,7 +9392,7 @@
         },
         {
             "word": "palette",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "palm tree",
@@ -9164,7 +9400,7 @@
         },
         {
             "word": "pan",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "pancake",
@@ -9172,11 +9408,11 @@
         },
         {
             "word": "panda",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "pandemic",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "panini",
@@ -9184,7 +9420,7 @@
         },
         {
             "word": "panpipes",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "panther",
@@ -9196,7 +9432,7 @@
         },
         {
             "word": "pants",
-            "frequency": 2
+            "frequency": 5
         },
         {
             "word": "paparazzi",
@@ -9236,7 +9472,7 @@
         },
         {
             "word": "parade",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "parakeet",
@@ -9247,12 +9483,16 @@
             "frequency": 1
         },
         {
+            "word": "parasol",
+            "frequency": 2
+        },
+        {
             "word": "parents",
             "frequency": 5
         },
         {
             "word": "park",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "parking",
@@ -9260,11 +9500,11 @@
         },
         {
             "word": "parking meter",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "parrot",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "parsley",
@@ -9272,19 +9512,19 @@
         },
         {
             "word": "party",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "passenger",
-            "frequency": 1
-        },
-        {
-            "word": "passport",
             "frequency": 2
         },
         {
+            "word": "passport",
+            "frequency": 3
+        },
+        {
             "word": "password",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "pasta",
@@ -9308,7 +9548,7 @@
         },
         {
             "word": "patio",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "patriot",
@@ -9324,7 +9564,7 @@
         },
         {
             "word": "paw",
-            "frequency": 6
+            "frequency": 7
         },
         {
             "word": "peace",
@@ -9336,7 +9576,7 @@
         },
         {
             "word": "peacock",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "peanut",
@@ -9364,7 +9604,7 @@
         },
         {
             "word": "pebble",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "pecan",
@@ -9388,11 +9628,11 @@
         },
         {
             "word": "pencil",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "pencil case",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "pencil sharpener",
@@ -9416,7 +9656,7 @@
         },
         {
             "word": "penny",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "pensioner",
@@ -9432,7 +9672,7 @@
         },
         {
             "word": "pepperoni",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "perfume",
@@ -9459,6 +9699,10 @@
             "frequency": 4
         },
         {
+            "word": "petal",
+            "frequency": 1
+        },
+        {
             "word": "pharaoh",
             "frequency": 3
         },
@@ -9472,7 +9716,7 @@
         },
         {
             "word": "philosopher",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "phoenix",
@@ -9516,11 +9760,11 @@
         },
         {
             "word": "piano",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "pickaxe",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "pickle",
@@ -9528,7 +9772,7 @@
         },
         {
             "word": "pickup truck",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "picnic",
@@ -9536,11 +9780,11 @@
         },
         {
             "word": "pie",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "pig",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "pigeon",
@@ -9548,7 +9792,7 @@
         },
         {
             "word": "piggy bank",
-            "frequency": 1
+            "frequency": 3
         },
         {
             "word": "pigsty",
@@ -9556,7 +9800,7 @@
         },
         {
             "word": "pill",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "pillar",
@@ -9564,19 +9808,23 @@
         },
         {
             "word": "pillow",
-            "frequency": 1
+            "frequency": 3
         },
         {
             "word": "pillow fight",
             "frequency": 1
         },
         {
+            "word": "pilot",
+            "frequency": 1
+        },
+        {
             "word": "pimple",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "pin",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "pinata",
@@ -9616,7 +9864,7 @@
         },
         {
             "word": "pirate",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "pirate ship",
@@ -9624,7 +9872,7 @@
         },
         {
             "word": "pistachio",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "pistol",
@@ -9640,7 +9888,7 @@
         },
         {
             "word": "pitchfork",
-            "frequency": 4
+            "frequency": 6
         },
         {
             "word": "pixel",
@@ -9648,7 +9896,7 @@
         },
         {
             "word": "pizza",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "plague",
@@ -9656,7 +9904,7 @@
         },
         {
             "word": "plague doctor",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "plains",
@@ -9672,7 +9920,7 @@
         },
         {
             "word": "plank",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "plankton",
@@ -9692,7 +9940,7 @@
         },
         {
             "word": "plastic bag",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "plastic wrap",
@@ -9700,15 +9948,19 @@
         },
         {
             "word": "plate",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "platform",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "platypus",
             "frequency": 3
+        },
+        {
+            "word": "player",
+            "frequency": 1
         },
         {
             "word": "playground",
@@ -9720,7 +9972,7 @@
         },
         {
             "word": "plexiglass",
-            "frequency": 6
+            "frequency": 7
         },
         {
             "word": "pliers",
@@ -9744,7 +9996,7 @@
         },
         {
             "word": "pocket",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "pogo stick",
@@ -9760,7 +10012,7 @@
         },
         {
             "word": "poke",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "poker",
@@ -9776,7 +10028,7 @@
         },
         {
             "word": "policeman",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "pollen",
@@ -9796,7 +10048,7 @@
         },
         {
             "word": "pomegranate",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "pond",
@@ -9816,7 +10068,7 @@
         },
         {
             "word": "poor",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "pop",
@@ -9836,7 +10088,7 @@
         },
         {
             "word": "popular",
-            "frequency": 5
+            "frequency": 7
         },
         {
             "word": "porch",
@@ -9852,7 +10104,7 @@
         },
         {
             "word": "port",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "portal",
@@ -9872,7 +10124,7 @@
         },
         {
             "word": "possum",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "postcard",
@@ -9896,7 +10148,7 @@
         },
         {
             "word": "pothole",
-            "frequency": 5
+            "frequency": 7
         },
         {
             "word": "pottery",
@@ -9904,7 +10156,7 @@
         },
         {
             "word": "pound",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "poutine",
@@ -9912,7 +10164,7 @@
         },
         {
             "word": "powder",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "power",
@@ -9924,7 +10176,7 @@
         },
         {
             "word": "power plant",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "pray",
@@ -9952,7 +10204,7 @@
         },
         {
             "word": "pretzel",
-            "frequency": 5
+            "frequency": 8
         },
         {
             "word": "price",
@@ -9968,11 +10220,11 @@
         },
         {
             "word": "prince",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "princess",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "principal",
@@ -9988,7 +10240,7 @@
         },
         {
             "word": "prison",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "prisoner",
@@ -9996,7 +10248,7 @@
         },
         {
             "word": "prize",
-            "frequency": 7
+            "frequency": 8
         },
         {
             "word": "pro",
@@ -10019,12 +10271,16 @@
             "frequency": 1
         },
         {
+            "word": "prosciutto",
+            "frequency": 1
+        },
+        {
             "word": "protect",
             "frequency": 1
         },
         {
             "word": "protection",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "protein",
@@ -10036,19 +10292,19 @@
         },
         {
             "word": "protester",
-            "frequency": 3
-        },
-        {
-            "word": "protractor",
             "frequency": 4
         },
         {
+            "word": "protractor",
+            "frequency": 5
+        },
+        {
             "word": "provoke",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "prune",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "pub",
@@ -10067,6 +10323,10 @@
             "frequency": 3
         },
         {
+            "word": "puffin",
+            "frequency": 1
+        },
+        {
             "word": "pull",
             "frequency": 1
         },
@@ -10076,7 +10336,7 @@
         },
         {
             "word": "puma",
-            "frequency": 2
+            "frequency": 5
         },
         {
             "word": "pump",
@@ -10088,7 +10348,7 @@
         },
         {
             "word": "punch",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "punching bag",
@@ -10100,7 +10360,7 @@
         },
         {
             "word": "punk",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "puppet",
@@ -10108,7 +10368,7 @@
         },
         {
             "word": "puppy",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "purity",
@@ -10124,15 +10384,15 @@
         },
         {
             "word": "purse",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "push",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "puzzle",
-            "frequency": 6
+            "frequency": 8
         },
         {
             "word": "pylon",
@@ -10144,7 +10404,7 @@
         },
         {
             "word": "python",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "quail",
@@ -10180,11 +10440,11 @@
         },
         {
             "word": "quiche",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "quicksand",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "quiet",
@@ -10192,7 +10452,7 @@
         },
         {
             "word": "quilt",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "quokka",
@@ -10200,7 +10460,7 @@
         },
         {
             "word": "raccoon",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "race",
@@ -10228,7 +10488,7 @@
         },
         {
             "word": "radish",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "raft",
@@ -10236,7 +10496,7 @@
         },
         {
             "word": "rag",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "rage",
@@ -10300,7 +10560,7 @@
         },
         {
             "word": "rapper",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "rare",
@@ -10308,7 +10568,7 @@
         },
         {
             "word": "raspberry",
-            "frequency": 6
+            "frequency": 7
         },
         {
             "word": "rat",
@@ -10324,7 +10584,7 @@
         },
         {
             "word": "razor",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "razorblade",
@@ -10368,11 +10628,11 @@
         },
         {
             "word": "record",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "recorder",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "rectangle",
@@ -10380,11 +10640,11 @@
         },
         {
             "word": "recycling",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "red",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "red carpet",
@@ -10392,7 +10652,7 @@
         },
         {
             "word": "red panda",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "redstone",
@@ -10400,7 +10660,7 @@
         },
         {
             "word": "reeds",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "referee",
@@ -10408,7 +10668,7 @@
         },
         {
             "word": "reflection",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "refresh",
@@ -10416,7 +10676,7 @@
         },
         {
             "word": "reincarnation",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "reindeer",
@@ -10436,7 +10696,7 @@
         },
         {
             "word": "repeat",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "reporter",
@@ -10448,7 +10708,7 @@
         },
         {
             "word": "resort",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "rest",
@@ -10456,11 +10716,15 @@
         },
         {
             "word": "retail",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "retirement home",
-            "frequency": 2
+            "frequency": 3
+        },
+        {
+            "word": "revolver",
+            "frequency": 1
         },
         {
             "word": "rewind",
@@ -10480,7 +10744,7 @@
         },
         {
             "word": "rib",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "ribbon",
@@ -10492,7 +10756,7 @@
         },
         {
             "word": "rich",
-            "frequency": 1
+            "frequency": 3
         },
         {
             "word": "right",
@@ -10508,7 +10772,7 @@
         },
         {
             "word": "ring finger",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "ringtone",
@@ -10516,7 +10780,7 @@
         },
         {
             "word": "riot",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "ripe",
@@ -10524,7 +10788,7 @@
         },
         {
             "word": "risk",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "river",
@@ -10556,7 +10820,7 @@
         },
         {
             "word": "robe",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "robin",
@@ -10576,7 +10840,7 @@
         },
         {
             "word": "rock pool",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "rocket",
@@ -10588,11 +10852,11 @@
         },
         {
             "word": "rockstar",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "rodeo",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "roller coaster",
@@ -10600,7 +10864,7 @@
         },
         {
             "word": "romance",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "roof",
@@ -10612,7 +10876,7 @@
         },
         {
             "word": "rooster",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "root",
@@ -10632,7 +10896,7 @@
         },
         {
             "word": "rough",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "round",
@@ -10672,7 +10936,7 @@
         },
         {
             "word": "rune",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "sad",
@@ -10684,7 +10948,7 @@
         },
         {
             "word": "safari",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "safe",
@@ -10692,7 +10956,7 @@
         },
         {
             "word": "safety clip",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "sailor",
@@ -10708,7 +10972,7 @@
         },
         {
             "word": "sale",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "saliva",
@@ -10716,7 +10980,7 @@
         },
         {
             "word": "salmon",
-            "frequency": 3
+            "frequency": 6
         },
         {
             "word": "salsa",
@@ -10728,7 +10992,7 @@
         },
         {
             "word": "saltwater",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "salute",
@@ -10736,7 +11000,7 @@
         },
         {
             "word": "sand",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "sand castle",
@@ -10759,6 +11023,10 @@
             "frequency": 1
         },
         {
+            "word": "sapphire",
+            "frequency": 1
+        },
+        {
             "word": "sardines",
             "frequency": 2
         },
@@ -10768,11 +11036,11 @@
         },
         {
             "word": "satellite dish",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "sauce",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "sauna",
@@ -10780,7 +11048,7 @@
         },
         {
             "word": "sausage",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "savanna",
@@ -10808,7 +11076,7 @@
         },
         {
             "word": "scalpel",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "scar",
@@ -10820,11 +11088,11 @@
         },
         {
             "word": "scarf",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "scary",
-            "frequency": 1
+            "frequency": 3
         },
         {
             "word": "scent",
@@ -10836,7 +11104,7 @@
         },
         {
             "word": "science",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "scientist",
@@ -10844,11 +11112,11 @@
         },
         {
             "word": "scimitar",
-            "frequency": 6
+            "frequency": 7
         },
         {
             "word": "scissors",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "scoop",
@@ -10864,7 +11132,7 @@
         },
         {
             "word": "scrambled eggs",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "scratch",
@@ -10876,7 +11144,7 @@
         },
         {
             "word": "screen",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "screw",
@@ -10892,7 +11160,7 @@
         },
         {
             "word": "scroll",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "scuba",
@@ -10900,7 +11168,7 @@
         },
         {
             "word": "sculpture",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "scythe",
@@ -10912,7 +11180,7 @@
         },
         {
             "word": "sea lion",
-            "frequency": 7
+            "frequency": 8
         },
         {
             "word": "sea turtle",
@@ -10932,15 +11200,15 @@
         },
         {
             "word": "seahorse",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "seal",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "search",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "seashell",
@@ -10948,7 +11216,7 @@
         },
         {
             "word": "seasick",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "season",
@@ -10956,7 +11224,7 @@
         },
         {
             "word": "seat",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "seat belt",
@@ -10964,11 +11232,11 @@
         },
         {
             "word": "seaweed",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "second",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "section",
@@ -10979,12 +11247,16 @@
             "frequency": 6
         },
         {
+            "word": "sedan",
+            "frequency": 1
+        },
+        {
             "word": "seed",
             "frequency": 3
         },
         {
             "word": "seesaw",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "selfie",
@@ -10996,7 +11268,7 @@
         },
         {
             "word": "semicircle",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "sensei",
@@ -11012,7 +11284,7 @@
         },
         {
             "word": "sew",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "sewer",
@@ -11100,15 +11372,15 @@
         },
         {
             "word": "ship",
-            "frequency": 4
+            "frequency": 6
         },
         {
             "word": "shipwreck",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "shirt",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "shock",
@@ -11124,7 +11396,7 @@
         },
         {
             "word": "shoehorn",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "shoelace",
@@ -11140,7 +11412,7 @@
         },
         {
             "word": "shooter",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "shooting star",
@@ -11176,7 +11448,7 @@
         },
         {
             "word": "shoulder",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "shout",
@@ -11184,7 +11456,7 @@
         },
         {
             "word": "shovel",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "shower",
@@ -11192,7 +11464,7 @@
         },
         {
             "word": "shrew",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "shrimp",
@@ -11204,7 +11476,7 @@
         },
         {
             "word": "shy",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "sick",
@@ -11228,7 +11500,7 @@
         },
         {
             "word": "silence",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "silo",
@@ -11236,11 +11508,11 @@
         },
         {
             "word": "silver",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "silverware",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "sing",
@@ -11252,11 +11524,11 @@
         },
         {
             "word": "sip",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "siren",
-            "frequency": 1
+            "frequency": 4
         },
         {
             "word": "sit",
@@ -11264,7 +11536,7 @@
         },
         {
             "word": "six pack",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "skateboard",
@@ -11284,7 +11556,7 @@
         },
         {
             "word": "ski jump",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "ski lift",
@@ -11292,11 +11564,15 @@
         },
         {
             "word": "skillet",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "skin",
             "frequency": 3
+        },
+        {
+            "word": "skinny",
+            "frequency": 1
         },
         {
             "word": "skirt",
@@ -11304,11 +11580,11 @@
         },
         {
             "word": "skribbl.io",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "skull",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "skunk",
@@ -11316,7 +11592,7 @@
         },
         {
             "word": "sky",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "skyscraper",
@@ -11324,7 +11600,7 @@
         },
         {
             "word": "slam",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "slave",
@@ -11332,7 +11608,7 @@
         },
         {
             "word": "sled",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "sledge",
@@ -11347,8 +11623,12 @@
             "frequency": 1
         },
         {
-            "word": "sleeve",
+            "word": "sleepwalk",
             "frequency": 1
+        },
+        {
+            "word": "sleeve",
+            "frequency": 2
         },
         {
             "word": "slide",
@@ -11360,7 +11640,7 @@
         },
         {
             "word": "slingshot",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "slip",
@@ -11368,7 +11648,7 @@
         },
         {
             "word": "slippers",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "slippery",
@@ -11379,20 +11659,24 @@
             "frequency": 4
         },
         {
+            "word": "sloth",
+            "frequency": 1
+        },
+        {
             "word": "slow",
             "frequency": 4
         },
         {
             "word": "slump",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "smart",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "smell",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "smile",
@@ -11400,7 +11684,7 @@
         },
         {
             "word": "smoke",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "smug",
@@ -11408,7 +11692,7 @@
         },
         {
             "word": "snack",
-            "frequency": 8
+            "frequency": 9
         },
         {
             "word": "snail",
@@ -11416,7 +11700,7 @@
         },
         {
             "word": "snake",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "snake charmer",
@@ -11428,7 +11712,7 @@
         },
         {
             "word": "sneeze",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "sniper",
@@ -11440,11 +11724,11 @@
         },
         {
             "word": "snow globe",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "snowball",
-            "frequency": 5
+            "frequency": 7
         },
         {
             "word": "snowball fight",
@@ -11452,7 +11736,7 @@
         },
         {
             "word": "snowboard",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "snowflake",
@@ -11460,19 +11744,19 @@
         },
         {
             "word": "snowman",
-            "frequency": 2
-        },
-        {
-            "word": "snowmobile",
             "frequency": 5
         },
         {
+            "word": "snowmobile",
+            "frequency": 6
+        },
+        {
             "word": "snowstorm",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "soccer",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "social media",
@@ -11480,7 +11764,7 @@
         },
         {
             "word": "sock puppet",
-            "frequency": 1
+            "frequency": 3
         },
         {
             "word": "socket",
@@ -11504,11 +11788,11 @@
         },
         {
             "word": "solar panel",
-            "frequency": 6
+            "frequency": 8
         },
         {
             "word": "soldier",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "sombrero",
@@ -11520,7 +11804,7 @@
         },
         {
             "word": "song",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "soot",
@@ -11528,7 +11812,7 @@
         },
         {
             "word": "sound",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "soup",
@@ -11572,15 +11856,19 @@
         },
         {
             "word": "spark",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "sparkles",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "spatula",
             "frequency": 3
+        },
+        {
+            "word": "speaker",
+            "frequency": 1
         },
         {
             "word": "spear",
@@ -11592,15 +11880,15 @@
         },
         {
             "word": "speed bump",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "speedboat",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "speedometer",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "spelunker",
@@ -11616,7 +11904,7 @@
         },
         {
             "word": "spider",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "spike strips",
@@ -11636,7 +11924,7 @@
         },
         {
             "word": "spine",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "spiral",
@@ -11644,7 +11932,7 @@
         },
         {
             "word": "spit",
-            "frequency": 1
+            "frequency": 3
         },
         {
             "word": "spoiler",
@@ -11656,7 +11944,7 @@
         },
         {
             "word": "spore",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "sports",
@@ -11664,11 +11952,11 @@
         },
         {
             "word": "sports car",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "spot",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "spray",
@@ -11684,7 +11972,7 @@
         },
         {
             "word": "spring",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "sprinkler",
@@ -11707,6 +11995,10 @@
             "frequency": 4
         },
         {
+            "word": "squash",
+            "frequency": 1
+        },
+        {
             "word": "squat",
             "frequency": 1
         },
@@ -11720,15 +12012,15 @@
         },
         {
             "word": "stab",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "stable",
-            "frequency": 7
+            "frequency": 8
         },
         {
             "word": "staff",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "stage",
@@ -11736,7 +12028,7 @@
         },
         {
             "word": "stain",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "stamp",
@@ -11744,7 +12036,7 @@
         },
         {
             "word": "stand",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "stapler",
@@ -11752,7 +12044,7 @@
         },
         {
             "word": "star",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "starfish",
@@ -11772,15 +12064,15 @@
         },
         {
             "word": "steak",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "steal",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "steampunk",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "steering wheel",
@@ -11796,11 +12088,11 @@
         },
         {
             "word": "stereo",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "stew",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "stick",
@@ -11808,7 +12100,7 @@
         },
         {
             "word": "stick man",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "sticker",
@@ -11820,7 +12112,7 @@
         },
         {
             "word": "stingray",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "stink",
@@ -11828,7 +12120,7 @@
         },
         {
             "word": "stink bug",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "stock",
@@ -11844,7 +12136,7 @@
         },
         {
             "word": "stomach",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "stone",
@@ -11860,7 +12152,7 @@
         },
         {
             "word": "stop sign",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "stopwatch",
@@ -11871,12 +12163,16 @@
             "frequency": 2
         },
         {
+            "word": "stork",
+            "frequency": 1
+        },
+        {
             "word": "storm",
             "frequency": 4
         },
         {
             "word": "storm drain",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "stove",
@@ -11884,7 +12180,7 @@
         },
         {
             "word": "straw",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "strawberry",
@@ -11892,7 +12188,7 @@
         },
         {
             "word": "streamer",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "street",
@@ -11904,7 +12200,7 @@
         },
         {
             "word": "streetcar",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "strength",
@@ -11920,7 +12216,7 @@
         },
         {
             "word": "stubble",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "student",
@@ -11944,11 +12240,11 @@
         },
         {
             "word": "submarine",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "subtraction",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "suburbs",
@@ -11956,7 +12252,7 @@
         },
         {
             "word": "subway",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "suck",
@@ -11976,7 +12272,7 @@
         },
         {
             "word": "sumo",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "sun",
@@ -11988,7 +12284,7 @@
         },
         {
             "word": "sunflower",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "sunglasses",
@@ -11996,7 +12292,7 @@
         },
         {
             "word": "sunny",
-            "frequency": 6
+            "frequency": 7
         },
         {
             "word": "sunrise",
@@ -12020,7 +12316,7 @@
         },
         {
             "word": "surface",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "surfboard",
@@ -12028,7 +12324,7 @@
         },
         {
             "word": "surgeon",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "sushi",
@@ -12052,11 +12348,11 @@
         },
         {
             "word": "sweat",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "sweater",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "sweet potato",
@@ -12064,7 +12360,7 @@
         },
         {
             "word": "swelling",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "swim ring",
@@ -12084,7 +12380,7 @@
         },
         {
             "word": "swing",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "switch",
@@ -12096,19 +12392,19 @@
         },
         {
             "word": "swordfish",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "symmetry",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "symphony",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "table",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "table tennis",
@@ -12116,7 +12412,7 @@
         },
         {
             "word": "tablecloth",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "tablet",
@@ -12124,7 +12420,7 @@
         },
         {
             "word": "tabletop",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "taco",
@@ -12132,7 +12428,7 @@
         },
         {
             "word": "tadpole",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "tail",
@@ -12152,10 +12448,14 @@
         },
         {
             "word": "talk",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "tall",
+            "frequency": 2
+        },
+        {
+            "word": "tampon",
             "frequency": 2
         },
         {
@@ -12164,7 +12464,7 @@
         },
         {
             "word": "tangled",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "tank",
@@ -12172,7 +12472,7 @@
         },
         {
             "word": "tap dance",
-            "frequency": 1
+            "frequency": 3
         },
         {
             "word": "tape",
@@ -12200,7 +12500,7 @@
         },
         {
             "word": "tater tots",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "tattoo",
@@ -12216,15 +12516,15 @@
         },
         {
             "word": "taxi driver",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "tea",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "tea bag",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "teacher",
@@ -12236,7 +12536,7 @@
         },
         {
             "word": "teapot",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "tear",
@@ -12244,7 +12544,7 @@
         },
         {
             "word": "teaspoon",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "tech support",
@@ -12252,11 +12552,11 @@
         },
         {
             "word": "teddy bear",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "tee",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "teenager",
@@ -12268,11 +12568,11 @@
         },
         {
             "word": "telescope",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "television",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "temperature",
@@ -12284,7 +12584,7 @@
         },
         {
             "word": "tennis racket",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "tent",
@@ -12300,19 +12600,19 @@
         },
         {
             "word": "theatre",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "theremin",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "thick",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "thief",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "thigh",
@@ -12340,15 +12640,15 @@
         },
         {
             "word": "throne",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "thug",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "thumbs down",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "thumbs up",
@@ -12372,7 +12672,7 @@
         },
         {
             "word": "tide",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "tie",
@@ -12396,7 +12696,7 @@
         },
         {
             "word": "timpani",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "tinfoil",
@@ -12408,15 +12708,19 @@
         },
         {
             "word": "tiny",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "tip",
             "frequency": 5
         },
         {
-            "word": "tiramisu",
+            "word": "tipi",
             "frequency": 2
+        },
+        {
+            "word": "tiramisu",
+            "frequency": 3
         },
         {
             "word": "tire",
@@ -12456,7 +12760,11 @@
         },
         {
             "word": "toe",
-            "frequency": 4
+            "frequency": 5
+        },
+        {
+            "word": "toenail",
+            "frequency": 1
         },
         {
             "word": "tofu",
@@ -12476,15 +12784,15 @@
         },
         {
             "word": "tomato",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "tomb",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "tombstone",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "tongue",
@@ -12496,11 +12804,11 @@
         },
         {
             "word": "toolbox",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "tooth",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "toothbrush",
@@ -12512,7 +12820,7 @@
         },
         {
             "word": "toothpick",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "top hat",
@@ -12524,11 +12832,11 @@
         },
         {
             "word": "tornado",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "torpedo",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "torso",
@@ -12544,7 +12852,7 @@
         },
         {
             "word": "totem",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "toucan",
@@ -12552,7 +12860,7 @@
         },
         {
             "word": "touch",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "tough",
@@ -12560,7 +12868,7 @@
         },
         {
             "word": "tourist",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "tow truck",
@@ -12572,7 +12880,7 @@
         },
         {
             "word": "tower",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "town",
@@ -12596,7 +12904,7 @@
         },
         {
             "word": "tractor",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "trade",
@@ -12616,15 +12924,15 @@
         },
         {
             "word": "trail",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "trailer",
-            "frequency": 6
+            "frequency": 8
         },
         {
             "word": "trailer park",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "train",
@@ -12636,7 +12944,7 @@
         },
         {
             "word": "tram",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "trampoline",
@@ -12656,7 +12964,7 @@
         },
         {
             "word": "trapdoor",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "trapezoid",
@@ -12668,7 +12976,7 @@
         },
         {
             "word": "traveler",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "tray",
@@ -12676,7 +12984,7 @@
         },
         {
             "word": "treadmill",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "treasure",
@@ -12684,11 +12992,11 @@
         },
         {
             "word": "tree",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "treehouse",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "trench",
@@ -12716,7 +13024,7 @@
         },
         {
             "word": "trip",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "triplets",
@@ -12728,11 +13036,11 @@
         },
         {
             "word": "troll",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "trombone",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "trophy",
@@ -12740,7 +13048,7 @@
         },
         {
             "word": "tropical",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "trousers",
@@ -12752,6 +13060,10 @@
         },
         {
             "word": "truck driver",
+            "frequency": 1
+        },
+        {
+            "word": "trumpet",
             "frequency": 1
         },
         {
@@ -12792,15 +13104,15 @@
         },
         {
             "word": "tuna",
-            "frequency": 2
-        },
-        {
-            "word": "tundra",
             "frequency": 3
         },
         {
+            "word": "tundra",
+            "frequency": 4
+        },
+        {
             "word": "tunnel",
-            "frequency": 6
+            "frequency": 8
         },
         {
             "word": "turban",
@@ -12812,7 +13124,7 @@
         },
         {
             "word": "turkey",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "turn",
@@ -12836,11 +13148,11 @@
         },
         {
             "word": "tuxedo",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "twig",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "twins",
@@ -12848,23 +13160,23 @@
         },
         {
             "word": "type",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "udder",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "ukulele",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "uncle",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "underground",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "underwear",
@@ -12872,11 +13184,11 @@
         },
         {
             "word": "underweight",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "undo",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "unibrow",
@@ -12884,11 +13196,11 @@
         },
         {
             "word": "unicorn",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "unicycle",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "uniform",
@@ -12896,7 +13208,7 @@
         },
         {
             "word": "uninhabited",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "universe",
@@ -12908,7 +13220,7 @@
         },
         {
             "word": "upgrade",
-            "frequency": 6
+            "frequency": 7
         },
         {
             "word": "upside down",
@@ -12936,7 +13248,7 @@
         },
         {
             "word": "valley",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "vampire",
@@ -12944,7 +13256,7 @@
         },
         {
             "word": "van",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "vanilla",
@@ -12967,6 +13279,10 @@
             "frequency": 2
         },
         {
+            "word": "vegetarian",
+            "frequency": 1
+        },
+        {
             "word": "vehicle",
             "frequency": 1
         },
@@ -12976,7 +13292,7 @@
         },
         {
             "word": "vein",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "vending machine",
@@ -12984,11 +13300,11 @@
         },
         {
             "word": "venomous",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "vent",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "ventilation",
@@ -13000,7 +13316,7 @@
         },
         {
             "word": "vest",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "veterinarian",
@@ -13020,11 +13336,15 @@
         },
         {
             "word": "video game",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "villain",
             "frequency": 2
+        },
+        {
+            "word": "vine",
+            "frequency": 1
         },
         {
             "word": "vinegar",
@@ -13048,15 +13368,19 @@
         },
         {
             "word": "violin",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "virtual reality",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "virus",
             "frequency": 3
+        },
+        {
+            "word": "vise",
+            "frequency": 1
         },
         {
             "word": "vision",
@@ -13068,7 +13392,7 @@
         },
         {
             "word": "vodka",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "volcano",
@@ -13076,7 +13400,7 @@
         },
         {
             "word": "volleyball",
-            "frequency": 2
+            "frequency": 5
         },
         {
             "word": "volume",
@@ -13084,7 +13408,7 @@
         },
         {
             "word": "vomit",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "voodoo",
@@ -13100,7 +13424,7 @@
         },
         {
             "word": "vulture",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "vuvuzela",
@@ -13108,15 +13432,15 @@
         },
         {
             "word": "waffle",
-            "frequency": 6
+            "frequency": 7
         },
         {
             "word": "wagon",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "waist",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "waiter",
@@ -13164,7 +13488,7 @@
         },
         {
             "word": "warm",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "warning",
@@ -13192,7 +13516,7 @@
         },
         {
             "word": "wasp",
-            "frequency": 4
+            "frequency": 6
         },
         {
             "word": "wasteland",
@@ -13236,7 +13560,7 @@
         },
         {
             "word": "watering can",
-            "frequency": 4
+            "frequency": 6
         },
         {
             "word": "watermelon",
@@ -13248,15 +13572,15 @@
         },
         {
             "word": "wax",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "weak",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "weakling",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "wealth",
@@ -13272,7 +13596,7 @@
         },
         {
             "word": "weather",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "weather vane",
@@ -13280,15 +13604,15 @@
         },
         {
             "word": "weatherman",
-            "frequency": 2
+            "frequency": 4
         },
         {
             "word": "web",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "website",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "wedding",
@@ -13296,11 +13620,11 @@
         },
         {
             "word": "weight",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "welder",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "well",
@@ -13308,7 +13632,7 @@
         },
         {
             "word": "werewolf",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "west",
@@ -13340,7 +13664,7 @@
         },
         {
             "word": "wheelbarrow",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "wheelchair",
@@ -13348,15 +13672,15 @@
         },
         {
             "word": "whip",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "whirlpool",
-            "frequency": 6
+            "frequency": 7
         },
         {
             "word": "whisk",
-            "frequency": 3
+            "frequency": 5
         },
         {
             "word": "whiskers",
@@ -13372,7 +13696,7 @@
         },
         {
             "word": "whistle",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "white",
@@ -13380,11 +13704,11 @@
         },
         {
             "word": "whiteboard",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "whole",
-            "frequency": 5
+            "frequency": 7
         },
         {
             "word": "wife",
@@ -13396,7 +13720,7 @@
         },
         {
             "word": "wiggle",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "willow",
@@ -13404,7 +13728,7 @@
         },
         {
             "word": "wind",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "wind farm",
@@ -13412,7 +13736,7 @@
         },
         {
             "word": "windmill",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "window",
@@ -13436,7 +13760,7 @@
         },
         {
             "word": "wine",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "wine glass",
@@ -13444,7 +13768,7 @@
         },
         {
             "word": "wing",
-            "frequency": 1
+            "frequency": 3
         },
         {
             "word": "wingnut",
@@ -13480,7 +13804,7 @@
         },
         {
             "word": "witness",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "wizard",
@@ -13496,11 +13820,11 @@
         },
         {
             "word": "woman",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "wonderland",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "wood",
@@ -13508,11 +13832,11 @@
         },
         {
             "word": "woodpecker",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "wool",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "work",
@@ -13536,19 +13860,19 @@
         },
         {
             "word": "wrap",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "wrapping",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "wreath",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "wrecking ball",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "wrestler",
@@ -13568,7 +13892,7 @@
         },
         {
             "word": "writer",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "x-ray",
@@ -13576,11 +13900,11 @@
         },
         {
             "word": "xylophone",
-            "frequency": 4
+            "frequency": 5
         },
         {
             "word": "yacht",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "yardstick",
@@ -13604,19 +13928,19 @@
         },
         {
             "word": "yellow",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "yeti",
-            "frequency": 5
+            "frequency": 6
         },
         {
             "word": "yield sign",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "yo-yo",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "yoga",
@@ -13624,7 +13948,7 @@
         },
         {
             "word": "yogurt",
-            "frequency": 3
+            "frequency": 4
         },
         {
             "word": "yolk",
@@ -13636,7 +13960,7 @@
         },
         {
             "word": "youtuber",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "zebra",
@@ -13668,7 +13992,7 @@
         },
         {
             "word": "zombie",
-            "frequency": 3
+            "frequency": 6
         },
         {
             "word": "zoo",
@@ -13676,11 +14000,11 @@
         },
         {
             "word": "zookeeper",
-            "frequency": 1
+            "frequency": 2
         },
         {
             "word": "zoom",
-            "frequency": 2
+            "frequency": 3
         },
         {
             "word": "zucchini",
