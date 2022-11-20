@@ -257,7 +257,7 @@ class Scraper:
                     if self.role == 'host':
                         try:
                             self.host__start_game()
-                        except ElementClickInterceptedException:
+                        except (ElementClickInterceptedException, ElementNotInteractableException):
                             print('Couldn\'t start game, button is covered by overlay. Retrying...')
                             pass
 
