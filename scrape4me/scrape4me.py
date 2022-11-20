@@ -10,7 +10,7 @@ from time import sleep
 from threading import Thread
 
 from selenium import webdriver
-from selenium.common.exceptions import (NoSuchElementException, StaleElementReferenceException, ElementNotInteractableException, TimeoutException)
+from selenium.common.exceptions import (NoSuchElementException, StaleElementReferenceException, ElementNotInteractableException, TimeoutException, ElementClickInterceptedException)
 from selenium.webdriver.common.by import By
 from selenium.webdriver.edge.options import Options as EdgeOptions
 from selenium.webdriver.edge.service import Service as EdgeService
@@ -255,7 +255,12 @@ class Scraper:
             match state:
                 case 'lobby':
                     if self.role == 'host':
-                        self.host__start_game()
+                        try:
+                            self.host__start_game()
+                        except ElementClickInterceptedException:
+                            print('Couldn\'t start game, button is covered by overlay. Retrying...')
+                            pass
+
 
                     sleep(LOOP_DELAY)
                     continue
