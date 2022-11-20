@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter.font import Font
 from gui.skribbler_window import SkribblerWindow
+from threading import Thread
 
 from gui.styles import *
 
@@ -75,11 +76,16 @@ class MainWindow(tk.Toplevel):
     
 
     def _on_button_click(self):
+        skribbler_launch_thread = Thread(target=self._launch_skribbler)
+        skribbler_launch_thread.start()
+
+        SkribblerWindow(self.skribbler, master=self.master)
+        self.destroy()
+
+
+    def _launch_skribbler(self):
         if not self.skribbler.driver_is_initialised:
             self.skribbler.init_driver()
         
         if not self.skribbler.website_is_loaded:
             self.skribbler.load_website()
-
-        SkribblerWindow(self.skribbler, master=self.master)
-        self.destroy()

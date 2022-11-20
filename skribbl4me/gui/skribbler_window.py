@@ -26,6 +26,11 @@ class SkribblerWindow(tk.Toplevel):
         self.after(0, self._update_ui)
     
 
+    def _on_close(self):
+        self.skribbler.stop_skribbling()
+        self.master.destroy()
+
+
     def _create_widgets(self):
         self._create_wrapper()
 
