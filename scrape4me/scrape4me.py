@@ -1,5 +1,5 @@
 # A bot that plays games against another version of itself. Based on code in ./skribbl4me.py, it should spin up two webdriver instances,
-# create a private game and play against each other. It should collect data about which words are used. It should repeat this process 
+# create a private game and play against each other. It should collect data about which words are used. It should repeat this process
 # for ever. Write for me copilot
 
 import argparse
@@ -26,7 +26,9 @@ from selenium.webdriver.common.keys import Keys
 
 
 
-LOOP_DELAY = 0.5
+LOOP_DELAY = 0.4
+WORD_SELECT_DELAY = 0.25
+OVERLAY_WAIT_DELAY = 0.25
 
 # Normal values are 10 and 3. For a slow PC (like a raspberry pi) use 20 and 10
 PAGE_LOAD_TIMEOUT = 10
@@ -41,10 +43,10 @@ ROUND_COUNT = 10
 global_stop_flag = False
 
 
-def log_words(words) -> None:
+def log_words(words: list[str]) -> None:
     words = [word.strip() for word in words if word.strip()] # Remove empty strings
 
-    print('Logging ', words)
+    print(f'Logging {len(words)} words: {words}')
 
     with open(RAW_WORD_ENCOUNTERS_FILE_PATH, 'a', encoding='utf-8') as file:
         file.write('\n'.join(words))
@@ -62,7 +64,7 @@ class Scraper:
         self.webdriver_is_on_path = webdriver_is_on_path
 
         self.__init_driver(headless=headless)
-    
+
     def set_other(self, other: 'Scraper'):
         self.other = other
 
@@ -101,7 +103,7 @@ class Scraper:
         self.driver.get('https://skribbl.io/')
         WebDriverWait(self.driver, PAGE_LOAD_TIMEOUT).until(EC.presence_of_element_located((By.ID, 'home')))
         assert 'skribbl' in self.driver.title
-        
+
         # ActionChains(self.driver).key_down(Keys.CONTROL).send_keys(Keys.SUBTRACT).key_up(Keys.CONTROL).perform()
         self.driver.find_element(By.TAG_NAME, 'html').send_keys(Keys.CONTROL, Keys.SUBTRACT)
         self.driver.find_element(By.TAG_NAME, 'html').send_keys(Keys.CONTROL, Keys.SUBTRACT)
@@ -114,7 +116,7 @@ class Scraper:
             pass
         except TimeoutException:
             pass
-    
+
     def host__host_game(self) -> str:
         create_room_button = self.driver.find_element(By.ID, 'home').find_element(By.CLASS_NAME, 'button-create')
         create_room_button.click()
@@ -134,13 +136,18 @@ class Scraper:
         number_of_words_dropdown = Select(self.driver.find_element(By.ID, 'item-settings-wordcount'))
         number_of_words_dropdown.select_by_visible_text('5')
 
+        ## Word mode
+        # Choose 'combination' as this allows us to select two words out of two sets of number_of_words. i.e. 10 instead of 5 per drawing
+        word_mode_dropdown = Select(self.driver.find_element(By.ID, 'item-settings-mode'))
+        word_mode_dropdown.select_by_visible_text('Combination')
+
         ## Get invite link
         invite_field = self.driver.find_element(By.ID, 'input-invite')
         invite_link = invite_field.get_attribute('value')
 
         if not invite_link:
             invite_link = invite_field.text
-        
+
         return invite_link
 
     def player__join_game(self, link: str):
@@ -169,12 +176,12 @@ class Scraper:
     # from skribbl4me.py
     def detect_state(self):
         screens : dict[str, WebElement | None] = {}
-        
+
         screens['login'] = self.driver.find_element(By.ID, 'home') # initial login screen
 
         screens['loading'] = self.driver.find_element(By.ID, 'load') # loading screen
         screens['game'] = self.driver.find_element(By.ID, 'game') # game screen
-        
+
         # must be after game screen
         try:
             screens['lobby'] = self.driver.find_element(By.CSS_SELECTOR, '.room.show') # custom lobby screen ('start-game' is a button with that ID which only displays when you're in the lobby - there is no dedicated lobby screen)
@@ -192,7 +199,7 @@ class Scraper:
                         displayed.append(screen_id)
             except StaleElementReferenceException:
                 pass
-        
+
 
 
         if len(displayed) == 0:
@@ -229,13 +236,13 @@ class Scraper:
                 return 'guessed'
         except NoSuchElementException:
             pass
-        
+
         return 'guessing'
 
     def loop(self):
 
         last_game_state = None
-        last_chosen_word = None
+        last_chosen_words = []
 
         while True:
 
@@ -244,7 +251,7 @@ class Scraper:
 
             state = self.detect_state()
             # print(f'{self.role}: {state}')
-            
+
             match state:
                 case 'lobby':
                     if self.role == 'host':
@@ -252,28 +259,58 @@ class Scraper:
 
                     sleep(LOOP_DELAY)
                     continue
-                    
+
                 case 'game':
                     game_state = self.detect_game_state()
                     # print(f'{self.role}: {state}/{game_state}')
-                
+
                     if game_state == 'drawing__word_select':
                         if game_state != last_game_state:
                             last_game_state = game_state
+
                             word_select = self.driver.find_element(By.ID, 'game-canvas').find_element(By.CLASS_NAME, 'overlay-content').find_element(By.CLASS_NAME, 'words')
                             word_select_buttons = word_select.find_elements(By.CLASS_NAME, 'word')
 
-                            words = []
-                            for button in word_select_buttons:
-                                words.append(button.text)
+                            # For combination word mode, there are two sets of words to choose from. They are both in the word_select element.
+                            # They are interlaced, i.e. WS1-1, WS2-1, WS1-2, WS2-2, etc.
+                            # We need to log all words, then choose one from the first set, wait, then choose one from the second set.
 
-                            log_words(words)
+                            last_chosen_words = []
+                            words_to_log = set()
 
-                            try:
-                                last_chosen_word = word_select_buttons[0].text
-                                word_select_buttons[0].click()
-                            except (ElementNotInteractableException, NoSuchElementException):
-                                pass
+                            counter = 0
+                            while counter < 10:
+                                if len(last_chosen_words) == 2:
+                                    break
+
+                                counter += 1
+                                sleep(WORD_SELECT_DELAY)
+
+                                visible_word_select_buttons = [button for button in word_select_buttons if button.is_displayed() and button.text.strip()]
+                                if not visible_word_select_buttons:
+                                    continue
+
+                                for button in visible_word_select_buttons:
+                                    words_to_log.add(button.text)
+
+                                try:
+                                    chosen_word = visible_word_select_buttons[0]
+                                    chosen_word_text = chosen_word.text.strip()
+
+                                    if not chosen_word_text:
+                                        continue
+                                    if chosen_word_text in last_chosen_words:
+                                        continue
+
+                                    chosen_word.click()
+                                    last_chosen_words.append(chosen_word_text)
+                                except (ElementNotInteractableException, NoSuchElementException):
+                                    pass
+
+                            log_words(list(words_to_log))
+
+                            if counter == 10:
+                                print('Error: Could not select word from word select screen. This round will take longer than usual.')
                         else:
                             # already logged these words, so just wait for the round to start
                             pass
@@ -282,27 +319,27 @@ class Scraper:
                         if game_state != last_game_state:
                             last_game_state = game_state
 
-                            sleep(1) # ensure overlay is gone
+                            sleep(OVERLAY_WAIT_DELAY) # ensure overlay is gone
 
-                            self.other.guess(last_chosen_word)
+                            self.other.guess('+'.join(last_chosen_words))
 
-                        
-                    
+
+
                     elif game_state == 'waiting_for_round':
                         if game_state != last_game_state:
                             last_game_state = game_state
-                    
+
                     elif game_state == 'guessed':
                         if game_state != last_game_state:
                             last_game_state = game_state
 
             sleep(LOOP_DELAY)
             continue
-    
+
     def guess(self, word):
         # #game > #game-wrapper #game-chat > .chat-container > form > input
         guess_input = self.driver.find_element(By.ID, 'game-wrapper').find_element(By.ID, 'game-chat').find_element(By.CLASS_NAME, 'chat-container').find_element(By.TAG_NAME, 'form').find_element(By.TAG_NAME, 'input')
-        
+
         try:
             guess_input.send_keys(word)
             guess_input.send_keys('\n')
