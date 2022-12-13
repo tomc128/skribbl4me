@@ -1,6 +1,7 @@
-import matplotlib.pyplot as plt
 import json
 from os import path
+
+import matplotlib.pyplot as plt
 
 COLLATED_WORD_ENCOUNTERS_FILE = 'word_data.json'
 collated_word_encounters_path = path.join(path.dirname(path.abspath(__file__)), COLLATED_WORD_ENCOUNTERS_FILE)

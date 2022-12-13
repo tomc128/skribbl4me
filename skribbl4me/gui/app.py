@@ -2,10 +2,8 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter.font import Font
 
-from gui.styles import *
-
 import sv_ttk
-
+from gui.styles import *
 
 
 class App(tk.Tk):

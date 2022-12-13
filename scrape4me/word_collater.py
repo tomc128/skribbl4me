@@ -1,5 +1,5 @@
-from os import path
 import json
+from os import path
 
 RAW_WORD_ENCOUNTERS_FILE = 'word_encounters.txt'
 COLLATED_WORD_ENCOUNTERS_FILE = 'word_data.json'

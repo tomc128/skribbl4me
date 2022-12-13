@@ -1,8 +1,9 @@
 import tkinter as tk
 from tkinter import ttk
-from gui.styles import *
 
+from gui.styles import *
 from skribbler import Skribbler
+
 
 class SkribblerWindow(tk.Toplevel):
 

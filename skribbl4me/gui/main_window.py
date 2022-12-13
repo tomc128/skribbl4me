@@ -1,12 +1,12 @@
 import tkinter as tk
+from threading import Thread
 from tkinter import ttk
 from tkinter.font import Font
+
 from gui.skribbler_window import SkribblerWindow
-from threading import Thread
-
 from gui.styles import *
-
 from skribbler import Skribbler
+
 
 class MainWindow(tk.Toplevel):
 
